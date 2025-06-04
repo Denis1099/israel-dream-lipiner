@@ -1,0 +1,29 @@
+# Enable rewriting
+RewriteEngine On
+
+# Allow direct access to API directory
+RewriteRule ^api/ - [L]
+
+# Allow direct access to assets and uploads
+RewriteRule ^assets/ - [L]
+RewriteRule ^lovable-uploads/ - [L]
+
+# If an existing asset or directory is requested, serve it
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+RewriteRule ^ - [L]
+
+# Serve index.html for all other routes (React routes)
+RewriteRule ^ /real-estate/index.html [L]
+
+# Set proper content types
+<FilesMatch "\.js$">
+    ForceType application/javascript
+</FilesMatch>
+
+<FilesMatch "\.css$">
+    ForceType text/css
+</FilesMatch>
+
+# Disable directory listing
+Options -Indexes 

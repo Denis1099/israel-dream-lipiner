@@ -1,0 +1,180 @@
+
+@layer components {
+  .section-padding {
+    @apply py-16 md:py-24 px-4 sm:px-6 md:px-8;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-primary-gold;
+    position: relative;
+    color: #b08d57; /* Explicit color for section titles */
+  }
+  
+  /* Remove the automatic ::after element since we're adding spans manually */
+  /* .section-title::after {
+    content: "";
+    @apply absolute -bottom-2 right-0 w-16 h-1 bg-primary-gold;
+  } */
+  
+  .section-subtitle {
+    @apply text-lg md:text-xl max-w-3xl mx-auto mb-12;
+    color: #000000; /* Explicit color for section subtitles */
+  }
+
+  .glass-effect {
+    @apply bg-white bg-opacity-80 backdrop-blur-md;
+  }
+  
+  .fancy-border {
+    border-radius: 0.75rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .fancy-border::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(45deg, #000000, #b08d57);
+    opacity: 0.7;
+    transform: scale(1.05);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+  }
+  
+  .fancy-border:hover::before {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  
+  .tag {
+    @apply inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-navy text-primary-light;
+  }
+  
+  /* Removed the conflicting !important rule that was preventing animations */
+  /* [class*='animate-'] {
+    opacity: 1 !important;
+    visibility: visible !important;
+  } */
+  
+  /* Ensure transitions are smooth */
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1.0);
+    transition-duration: 300ms;
+  }
+  
+  /* Hover effect for cards */
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-lift:hover {
+    @apply transform -translate-y-1 shadow-lg;
+  }
+  
+  /* Button animations */
+  .btn-primary {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+  
+  .btn-primary::after {
+    content: "";
+    @apply absolute inset-0 bg-white/20 scale-x-0 transition-transform duration-300 origin-left;
+  }
+  
+  .btn-primary:hover::after {
+    @apply scale-x-100;
+  }
+  
+  /* Text fade-in animation */
+  .text-fade-in {
+    animation: textFadeIn 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards;
+  }
+  
+  @keyframes textFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Remove image hover effect for About section */
+  .about-image {
+    transition: none;
+  }
+  
+  .about-image:hover {
+    transform: none;
+  }
+  
+  /* Fix animation issues */
+  .animate-on-scroll {
+    transition: opacity 0.6s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+  }
+  
+  .animate-on-scroll.animated {
+    opacity: 1;
+  }
+  
+  /* Graceful image loading */
+  .img-loading {
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+  }
+  
+  .img-loaded {
+    opacity: 1;
+  }
+  
+  /* Fix FAQ section text visibility */
+  .faq-question {
+    @apply text-primary-gold font-medium;
+    color: #b08d57; /* Force visible color */
+  }
+  
+  .faq-answer {
+    @apply text-black;
+    color: #000000; /* Force visible color */
+  }
+  
+  /* Center align contact form */
+  .contact-form-wrapper {
+    @apply mx-auto;
+  }
+  
+  /* Ensure proper z-indexing for decorative elements */
+  .decorative-element {
+    @apply absolute pointer-events-none;
+    z-index: -1 !important;
+  }
+  
+  /* Fix for the golden rectangle in About section */
+  .about-golden-rectangle {
+    z-index: -1;
+    position: absolute;
+  }
+  
+  /* Hero background with responsive behavior */
+  .hero-background {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.65)), url("/lovable-uploads/bg-image.webp");
+    background-size: cover;
+    background-position: center;
+    /* Default: no fixed attachment for mobile */
+  }
+  
+  /* Apply fixed background only on desktop/larger screens */
+  @media (min-width: 768px) {
+    .hero-background {
+      background-attachment: fixed;
+    }
+  }
+}

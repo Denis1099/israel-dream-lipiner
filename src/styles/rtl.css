@@ -1,0 +1,23 @@
+
+@layer components {
+  /* RTL specific styles */
+  .rtl-list {
+    padding-right: 1.5rem;
+    padding-left: 0;
+  }
+  
+  .rtl-list li {
+    position: relative;
+  }
+  
+  .rtl-list li::before {
+    content: "•";
+    position: absolute;
+    right: -1.5rem;
+    color: #b08d57;
+  }
+  
+  input, textarea, select {
+    text-align: right;
+  }
+}
