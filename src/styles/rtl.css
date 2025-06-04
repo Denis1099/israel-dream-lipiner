@@ -1,23 +1,22 @@
-
 @layer components {
-  /* RTL specific styles */
-  .rtl-list {
-    padding-right: 1.5rem;
-    padding-left: 0;
+  /* LTR specific styles */
+  .ltr-list {
+    padding-left: 1.5rem;
+    padding-right: 0;
   }
   
-  .rtl-list li {
+  .ltr-list li {
     position: relative;
   }
   
-  .rtl-list li::before {
+  .ltr-list li::before {
     content: "•";
     position: absolute;
-    right: -1.5rem;
+    left: -1.5rem;
     color: #b08d57;
   }
   
   input, textarea, select {
-    text-align: right;
+    text-align: left;
   }
 }

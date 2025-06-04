@@ -40,7 +40,7 @@ const HeroSection = () => {
           name,
           phone,
           email: 'no-email@provided.com',
-          serviceType: 'לא צוין',
+          serviceType: 'Not specified',
           message: '',
           source: 'hero-form'
         }),
@@ -49,7 +49,7 @@ const HeroSection = () => {
       const result = await response.json();
       
       if (!response.ok) {
-        throw new Error(result.message || 'אירעה שגיאה בשליחת הטופס');
+        throw new Error(result.message || 'An error occurred while submitting the form');
       }
       
       setSubmitted(true);
@@ -62,7 +62,7 @@ const HeroSection = () => {
       }, 5000);
     } catch (error) {
       console.error('Form submission error:', error);
-      alert('אירעה שגיאה בשליחת הטופס, נסה שנית');
+      alert('An error occurred while submitting the form, please try again');
     } finally {
       setIsSubmitting(false);
     }
@@ -98,45 +98,47 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
-          <AnimatedBox animation="slideInRight" className="w-full lg:w-6/12 mb-12 lg:mb-0 text-center lg:text-right">
+          <AnimatedBox animation="slideInLeft" className="w-full lg:w-6/12 mb-12 lg:mb-0 text-center lg:text-left">
             <div className="inline-block relative mb-8 group hover:scale-105 transition-transform duration-500">
               <span 
                 style={{ color: '#b08d57' }} 
-                className="inline-block text-primary-gold px-6 py-2 rounded-full border border-primary-gold font-bold text-xl font-assistant relative z-10 shadow-lg group-hover:shadow-primary-gold/30 transition-shadow duration-300"
+                className="inline-block text-primary-gold px-6 py-2 rounded-full border border-primary-gold font-bold text-xl font-inter relative z-10 shadow-lg group-hover:shadow-primary-gold/30 transition-shadow duration-300"
               >
-                עו״ד אבי ליפינר - מומחה במקרקעין
+                Attorneys Yaron Fuks & Avi Lipiner
               </span>
               <div className="absolute -inset-0.5 bg-primary-gold/20 rounded-full blur-sm group-hover:bg-primary-gold/30 transition-colors duration-300"></div>
             </div>
             
             <h1 
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-light leading-tight mb-6 md:mb-8 font-karantina relative animate-slideUp"
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-light leading-tight mb-6 md:mb-8 font-playfair relative animate-slideUp"
               style={{ color: '#ffffff', textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}
             >
               <span className="relative inline-block">
-                ליווי משפטי מקצועי ואישי
-                <div className="absolute h-1 w-24 bg-primary-gold right-0 -bottom-2 lg:block hidden"></div>
+                Your Israel Dream Starts Here
+                <div className="absolute h-1 w-24 bg-primary-gold left-0 -bottom-2 lg:block hidden"></div>
               </span>
               <br />
               <span className="text-primary-gold relative inline-block" style={{ color: '#b08d57' }}>
-                בעסקאות מכר דירות
+                Trusted Legal Guidance for Americans Investing in Israel
               </span>
             </h1>
             
-            <div className="text-xl md:text-2xl text-primary-light mb-0 md:mb-8 max-w-2xl lg:mx-0 mx-auto font-assistant leading-relaxed" style={{ color: '#fbfbfb' }}>
-              <p className="mb-4 animate-fadeIn" style={{ animationDelay: '0.3s' }}>מהייעוץ הראשוני ועד למסירת המפתח - שילוב מנצח של מומחיות משפטית ופיננסית</p>
+            <div className="text-xl md:text-2xl text-primary-light mb-0 md:mb-8 max-w-2xl lg:mx-0 mx-auto font-inter leading-relaxed" style={{ color: '#fbfbfb' }}>
+              <p className="mb-4 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
+                Attorneys Yaron Fuks and Avi Lipiner are experienced Israeli real estate and business lawyers. They have represented numerous U.S. individuals and families in purchasing property, acquiring businesses, launching ventures, and protecting assets in Israel.
+              </p>
               <div className="flex flex-col space-y-4 md:space-y-3">
-                <div className="flex items-start transform transition-transform duration-300 hover:translate-x-[-5px]">
-                  <div className="w-3 h-3 rounded-full bg-primary-gold mt-2 ml-4" style={{ backgroundColor: '#b08d57', minWidth: '12px' }}></div>
-                  <span>עסקה בטוחה ומוצלחת</span>
+                <div className="flex items-start transform transition-transform duration-300 hover:translate-x-[5px]">
+                  <div className="w-3 h-3 rounded-full bg-primary-gold mt-2 mr-4" style={{ backgroundColor: '#b08d57', minWidth: '12px' }}></div>
+                  <span>Comprehensive legal support</span>
                 </div>
-                <div className="flex items-start transform transition-transform duration-300 hover:translate-x-[-5px]">
-                  <div className="w-3 h-3 rounded-full bg-primary-gold mt-2 ml-4" style={{ backgroundColor: '#b08d57', minWidth: '12px' }}></div>
-                  <span>ליווי אישי לאורך כל התהליך</span>
+                <div className="flex items-start transform transition-transform duration-300 hover:translate-x-[5px]">
+                  <div className="w-3 h-3 rounded-full bg-primary-gold mt-2 mr-4" style={{ backgroundColor: '#b08d57', minWidth: '12px' }}></div>
+                  <span>Financing assistance</span>
                 </div>
-                <div className="flex items-start transform transition-transform duration-300 hover:translate-x-[-5px]">
-                  <div className="w-3 h-3 rounded-full bg-primary-gold mt-2 ml-4" style={{ backgroundColor: '#b08d57', minWidth: '12px' }}></div>
-                  <span>ללא דאגות וללא פשרות</span>
+                <div className="flex items-start transform transition-transform duration-300 hover:translate-x-[5px]">
+                  <div className="w-3 h-3 rounded-full bg-primary-gold mt-2 mr-4" style={{ backgroundColor: '#b08d57', minWidth: '12px' }}></div>
+                  <span>Personalized service — all in English</span>
                 </div>
               </div>
             </div>
@@ -155,7 +157,7 @@ const HeroSection = () => {
                   style={{ color: '#b08d57' }} 
                   className="font-bold text-primary-gold mb-8 text-center text-3xl md:text-4xl relative"
                 >
-                  קבעו שיחת ייעוץ חינם
+                  Schedule a Free Consultation
                   <div className="absolute -bottom-3 left-0 right-0 mx-auto h-1 w-16 bg-primary-gold/60" style={{ backgroundColor: 'rgba(176, 141, 87, 0.6)' }}></div>
                 </h3>
                 
@@ -166,16 +168,16 @@ const HeroSection = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <h4 className="text-lg font-semibold text-gray-800 mb-2">תודה על פנייתך!</h4>
-                    <p className="text-gray-600">אצור איתך קשר בהקדם.</p>
+                    <h4 className="text-lg font-semibold text-gray-800 mb-2">Thank you for contacting us!</h4>
+                    <p className="text-gray-600">We'll be in touch shortly.</p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="transition-all duration-300 hover:translate-y-[-2px]">
-                      <label className="block text-gray-700 text-right mb-1">שם מלא</label>
+                      <label className="block text-gray-700 text-left mb-1">Full Name</label>
                       <input 
                         type="text" 
-                        placeholder="הזן/י את שמך המלא" 
+                        placeholder="Enter your full name" 
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold/50 focus:border-primary-gold/50 transition"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
@@ -183,10 +185,10 @@ const HeroSection = () => {
                       />
                     </div>
                     <div className="transition-all duration-300 hover:translate-y-[-2px]">
-                      <label className="block text-gray-700 text-right mb-1">טלפון נייד</label>
+                      <label className="block text-gray-700 text-left mb-1">Phone Number</label>
                       <input 
                         type="tel" 
-                        placeholder="הזן/י מספר טלפון נייד" 
+                        placeholder="Enter your phone number" 
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold/50 focus:border-primary-gold/50 transition"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
@@ -200,7 +202,7 @@ const HeroSection = () => {
                       disabled={isSubmitting}
                     >
                       <span className="relative z-10">
-                        {isSubmitting ? 'שולח...' : 'קבעו שיחת ייעוץ חינם'}
+                        {isSubmitting ? 'Submitting...' : 'Schedule Free Consultation'}
                       </span>
                       <span className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
                     </button>
@@ -208,7 +210,7 @@ const HeroSection = () => {
                 )}
                 
                 <p className="text-xs text-gray-500 mt-4 text-center">
-                  הפרטים שלך מאובטחים ולא יועברו לגורם שלישי.
+                  Your information is secure and will not be shared with third parties.
                 </p>
               </div>
             </div>

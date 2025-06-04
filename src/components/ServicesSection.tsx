@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { FileText, Calculator, HomeIcon, ChevronRight, ChevronLeft } from 'lucide-react';
+import { FileText, Calculator, HomeIcon, ChevronRight, ChevronLeft, Briefcase, Shield, Users } from 'lucide-react';
 import AnimatedBox from './AnimatedBox';
 
 const ServicesSection = () => {
@@ -8,40 +7,76 @@ const ServicesSection = () => {
   
   const services = [
     {
-      icon: <FileText size={36} className="text-primary-gold" />,
+      icon: <HomeIcon size={36} className="text-primary-gold" />,
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=2712",
-      title: "בדיקות מקדימות וחוזה מכר",
-      description: "ליווי מקצועי בשלב הבדיקות הראשוניות, ניסוח וסקירת חוזה המכר, זיהוי סיכונים פוטנציאליים והבטחת האינטרסים שלכם. בדיקת רישום הנכס, היעדר שעבודים, ותיאום מול ספרי המקרקעין.",
+      title: "Real Estate Transactions",
+      description: "Legal representation for purchasing or selling property in Israel, including contract negotiation, due diligence, and land registration.",
       benefits: [
-        "בדיקה מדוקדקת של למעלה מ-20 נקודות קריטיות בכל חוזה מכר",
-        "זיהוי מוקדם של סיכונים משפטיים",
-        "חוזה מותאם אישית להגנה על האינטרסים שלכם"
+        "Comprehensive property due diligence and contract review",
+        "Early identification of legal risks and issues",
+        "Customized contract protection for your interests"
       ],
-      statistic: "בדיקה מדוקדקת של למעלה מ-20 נקודות קריטיות בכל חוזה מכר"
+      statistic: "Full legal representation throughout the entire property transaction process"
     },
     {
       icon: <Calculator size={36} className="text-primary-gold" />,
       image: "https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&q=80&w=3540",
-      title: "ליווי פיננסי ומשכנתאות",
-      description: "ייעוץ מקצועי בהיבטים הפיננסיים של העסקה, ליווי בתהליך המשכנתא, תיאום מול הבנק, הכנת המסמכים הנדרשים והבטחת העברות כספים בטוחות ויעילות.",
+      title: "Financing Assistance",
+      description: "Support in obtaining Israeli mortgages, coordinating with local banks, and leveraging U.S.-based income or assets for financing.",
       benefits: [
-        "תנאי מימון אופטימליים המותאמים לצרכים שלכם",
-        "חיסכון של אלפי שקלים בריבית ובעלויות",
-        "ליווי מול הבנק עד לביצוע העברות הכספים"
+        "Optimal financing terms tailored to your needs",
+        "Savings of thousands on interest and costs",
+        "Full coordination with banks through fund transfers"
       ],
-      statistic: "סיוע בהשגת תנאי מימון אופטימליים המותאמים ליכולות הפיננסיות שלכם"
+      statistic: "Expert assistance in securing optimal financing terms suited to your financial capabilities"
     },
     {
-      icon: <HomeIcon size={36} className="text-primary-gold" />,
+      icon: <Shield size={36} className="text-primary-gold" />,
       image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=3546",
-      title: "השלמת העסקה ורישום הזכויות",
-      description: "ליווי צמוד בשלב ההתחשבנויות הסופיות, העברת הכספים, חתימה אצל נוטריון כשנדרש, טיפול בדיווחים למס שבח ומס רכישה, ורישום הזכויות על שמכם בטאבו.",
+      title: "Foreign Buyers Tax Guidance",
+      description: "Advisory on Israeli purchase taxes, capital gains, and compliance obligations for non-resident buyers.",
       benefits: [
-        "100% הצלחה ברישום זכויות בטאבו",
-        "טיפול מלא בדיווחי המס ובתשלומים הנדרשים",
-        "ודאות משפטית מלאה בבעלות על הנכס"
+        "100% success in proper tax registration and compliance",
+        "Complete handling of tax reports and required payments",
+        "Full legal certainty in property ownership"
       ],
-      statistic: "100% הצלחה ברישום זכויות תקין בטאבו ללא עיכובים מיותרים"
+      statistic: "Complete tax guidance and compliance for non-resident property buyers"
+    },
+    {
+      icon: <FileText size={36} className="text-primary-gold" />,
+      image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=2712",
+      title: "Wills and Enduring Power of Attorney",
+      description: "Preparation of legally valid documents under Israeli law, including halachic and civil considerations, for asset protection and future planning.",
+      benefits: [
+        "Documents valid under both Israeli civil and religious law",
+        "Comprehensive asset protection strategies",
+        "Clear succession planning for Israeli assets"
+      ],
+      statistic: "Expert preparation of Israeli wills and power of attorney documents"
+    },
+    {
+      icon: <Users size={36} className="text-primary-gold" />,
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2712",
+      title: "Home Visits and Remote Legal Services",
+      description: "In-person consultations for local clients and secure remote services for international clients, elderly individuals, or those with limited mobility.",
+      benefits: [
+        "Flexible service delivery options",
+        "Secure remote consultation capabilities",
+        "Personalized attention regardless of location"
+      ],
+      statistic: "Convenient legal services delivered to your location or remotely"
+    },
+    {
+      icon: <Briefcase size={36} className="text-primary-gold" />,
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=2712",
+      title: "Business Law and Corporate Services",
+      description: "Formation of Israeli companies and legal entities, acquisition of businesses and commercial properties, drafting and review of commercial contracts, tax planning, including cross-border tax considerations.",
+      benefits: [
+        "Complete business formation and setup services",
+        "Cross-border tax planning and optimization",
+        "Commercial contract drafting and review"
+      ],
+      statistic: "Full-service business law support for American investors in Israel"
     }
   ];
 
@@ -58,14 +93,14 @@ const ServicesSection = () => {
     <section id="services" className="section-padding py-16 bg-primary-light relative">
       <div className="container mx-auto px-5 md:px-8">
         <AnimatedBox animation="fadeIn">
-          <h2 className="section-title text-center mx-auto text-3xl md:text-5xl mb-3 flex justify-center">הליווי המשפטי המקיף שלנו בעסקאות מכר דירות</h2>
-          <p className="text-center text-lg text-black/80 max-w-3xl mx-auto">
-            אנו מלווים אתכם בכל שלבי העסקה - מהבדיקות הראשוניות ועד רישום הזכויות בטאבו, תוך שמירה על האינטרסים שלכם לאורך כל הדרך.
+          <h2 className="section-title text-center mx-auto text-3xl md:text-5xl mb-3 flex justify-center">Our Services Include:</h2>
+          <p className="text-center text-lg text-black/80 max-w-4xl mx-auto">
+            We provide comprehensive legal support for Americans investing in Israel, from initial consultation to successful transaction completion, protecting your interests every step of the way.
           </p>
         </AnimatedBox>
 
-        {/* Desktop Layout - 3 columns */}
-        <div className="hidden lg:grid grid-cols-3 gap-8 mt-12">
+        {/* Desktop Layout - 3 columns grid */}
+        <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-12">
           {services.map((service, index) => (
             <AnimatedBox 
               key={index} 
@@ -82,12 +117,12 @@ const ServicesSection = () => {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary-navy/80 to-transparent"></div>
-                  <div className="absolute bottom-4 right-4 bg-primary-light rounded-full p-3 shadow-md">
+                  <div className="absolute bottom-4 left-4 bg-primary-light rounded-full p-3 shadow-md">
                     {service.icon}
                   </div>
                 </div>
                 
-                <div className="p-6 flex flex-col flex-grow text-center">
+                <div className="p-6 flex flex-col flex-grow text-left">
                   <h3 className="text-2xl font-bold mb-3 text-primary-gold">{service.title}</h3>
                   <p className="text-black mb-4 leading-relaxed">{service.description}</p>
                   
@@ -107,7 +142,7 @@ const ServicesSection = () => {
         {/* Mobile Layout - Tabbed interface with sliding cards */}
         <div className="lg:hidden mt-8">
           <div className="flex justify-center mb-6">
-            <div className="flex space-x-2 rtl:space-x-reverse">
+            <div className="flex space-x-2">
               {services.map((_, index) => (
                 <button
                   key={index}
@@ -128,14 +163,14 @@ const ServicesSection = () => {
                 className="bg-white/80 hover:bg-white text-primary-gold p-2 rounded-full shadow-md ml-2"
                 aria-label="Previous service"
               >
-                <ChevronRight size={20} />
+                <ChevronLeft size={20} />
               </button>
               <button
                 onClick={nextTab}
                 className="bg-white/80 hover:bg-white text-primary-gold p-2 rounded-full shadow-md mr-2"
                 aria-label="Next service"
               >
-                <ChevronLeft size={20} />
+                <ChevronRight size={20} />
               </button>
             </div>
             
@@ -156,20 +191,20 @@ const ServicesSection = () => {
                         loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary-navy/80 to-transparent"></div>
-                      <div className="absolute bottom-4 right-4 bg-primary-light rounded-full p-3 shadow-md">
+                      <div className="absolute bottom-4 left-4 bg-primary-light rounded-full p-3 shadow-md">
                         {service.icon}
                       </div>
                     </div>
                     
-                    <div className="p-5 text-center">
+                    <div className="p-5 text-left">
                       <h3 className="text-2xl font-bold mb-3 text-primary-gold">{service.title}</h3>
                       <p className="text-black mb-4 text-sm leading-relaxed">{service.description}</p>
                       
                       <ul className="mb-4 space-y-2">
                         {service.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-start justify-center">
-                            <div className="text-primary-gold ml-2 mt-1 flex-shrink-0">•</div>
-                            <span className="text-sm text-right">{benefit}</span>
+                          <li key={idx} className="flex items-start">
+                            <div className="text-primary-gold mr-2 mt-1 flex-shrink-0">•</div>
+                            <span className="text-sm text-left">{benefit}</span>
                           </li>
                         ))}
                       </ul>
@@ -191,9 +226,9 @@ const ServicesSection = () => {
           <a 
             href="#contact" 
             className="inline-block py-4 px-10 bg-primary-navy text-primary-light font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:bg-primary-navy/90 text-xl"
-            aria-label="צרו קשר לקבלת פרטים נוספים על שירותי הליווי המשפטי"
+            aria-label="Contact us for more information about our legal services"
           >
-            לפרטים נוספים צרו קשר
+            Contact Us for More Information
           </a>
         </AnimatedBox>
       </div>

@@ -71,12 +71,12 @@ const Index = () => {
       });
       
       // Fix font family issues
-      document.querySelectorAll('.font-karantina').forEach(el => {
-        (el as HTMLElement).style.fontFamily = 'Karantina, sans-serif';
+      document.querySelectorAll('.font-playfair').forEach(el => {
+        (el as HTMLElement).style.fontFamily = 'Playfair Display, serif';
       });
       
-      document.querySelectorAll('.font-assistant').forEach(el => {
-        (el as HTMLElement).style.fontFamily = 'Assistant, sans-serif';
+      document.querySelectorAll('.font-inter').forEach(el => {
+        (el as HTMLElement).style.fontFamily = 'Inter, sans-serif';
       });
 
       fixDecorative();
@@ -117,7 +117,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className={`min-h-screen bg-white transition-opacity duration-700 ${isLoaded ? 'opacity-100' : 'opacity-0'}`} dir="rtl">
+    <div className={`min-h-screen bg-white transition-opacity duration-700 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <Navbar activeSection={activeSection} />
       <HeroSection />
       <AdvantagesSection />

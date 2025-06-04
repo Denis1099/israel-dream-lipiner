@@ -20,9 +20,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				karantina: ['Karantina', 'cursive'],
-				heebo: ['Heebo', 'sans-serif'],
-				assistant: ['Assistant', 'sans-serif'],
+				playfair: ['Playfair Display', 'serif'],
+				inter: ['Inter', 'sans-serif'],
+				sans: ['Inter', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
