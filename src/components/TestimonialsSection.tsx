@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { ChevronRight, ChevronLeft, Quote, Star } from 'lucide-react';
 import AnimatedBox from './AnimatedBox';
@@ -50,7 +49,7 @@ const TestimonialsSection: React.FC = () => {
       progressRef.current.style.transition = 'none';
       progressRef.current.style.width = '0%';
       // Force reflow
-      progressRef.current.offsetHeight; 
+      void progressRef.current.offsetHeight; 
       progressRef.current.style.transition = `width ${autoSlideTime}ms linear`;
       progressRef.current.style.width = '100%';
     }
