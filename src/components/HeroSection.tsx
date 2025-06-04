@@ -99,48 +99,27 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
           <AnimatedBox animation="slideInLeft" className="w-full lg:w-6/12 mb-12 lg:mb-0 text-center lg:text-left">
-            <div className="inline-block relative mb-8 group hover:scale-105 transition-transform duration-500">
-              <span 
-                style={{ color: '#b08d57' }} 
-                className="inline-block text-primary-gold px-6 py-2 rounded-full border border-primary-gold font-bold text-xl font-inter relative z-10 shadow-lg group-hover:shadow-primary-gold/30 transition-shadow duration-300"
-              >
-                Attorneys Yaron Fuks & Avi Lipiner
-              </span>
-              <div className="absolute -inset-0.5 bg-primary-gold/20 rounded-full blur-sm group-hover:bg-primary-gold/30 transition-colors duration-300"></div>
-            </div>
-            
             <h1 
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-light leading-tight mb-6 md:mb-8 font-playfair relative animate-slideUp"
+              className="text-4xl sm:text-5xl lg:text-7xl font-bold text-primary-light leading-tight mb-6 md:mb-8 font-dm-serif relative animate-slideUp"
               style={{ color: '#ffffff', textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}
             >
               <span className="relative inline-block">
                 Your Israel Dream Starts Here
                 <div className="absolute h-1 w-24 bg-primary-gold left-0 -bottom-2 lg:block hidden"></div>
               </span>
-              <br />
-              <span className="text-primary-gold relative inline-block" style={{ color: '#b08d57' }}>
-                Trusted Legal Guidance for Americans Investing in Israel
-              </span>
             </h1>
             
-            <div className="text-xl md:text-2xl text-primary-light mb-0 md:mb-8 max-w-2xl lg:mx-0 mx-auto font-inter leading-relaxed" style={{ color: '#fbfbfb' }}>
-              <p className="mb-4 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
-                Attorneys Yaron Fuks and Avi Lipiner are experienced Israeli real estate and business lawyers. They have represented numerous U.S. individuals and families in purchasing property, acquiring businesses, launching ventures, and protecting assets in Israel.
+            <h2 
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary-gold mb-10 font-dm-serif"
+              style={{ color: '#b08d57' }}
+            >
+              Trusted Legal Guidance for Americans Investing in Israel
+            </h2>
+            
+            <div className="text-lg md:text-xl text-primary-light mb-8 max-w-2xl lg:mx-0 mx-auto font-inter leading-relaxed" style={{ color: '#fbfbfb' }}>
+              <p>
+                Attorneys Yaron Fuks and Avi Lipiner guide Americans through Israeli property purchases, business ventures, and investments. Expert legal support and financing assistance — all in English.
               </p>
-              <div className="flex flex-col space-y-4 md:space-y-3">
-                <div className="flex items-start transform transition-transform duration-300 hover:translate-x-[5px]">
-                  <div className="w-3 h-3 rounded-full bg-primary-gold mt-2 mr-4" style={{ backgroundColor: '#b08d57', minWidth: '12px' }}></div>
-                  <span>Comprehensive legal support</span>
-                </div>
-                <div className="flex items-start transform transition-transform duration-300 hover:translate-x-[5px]">
-                  <div className="w-3 h-3 rounded-full bg-primary-gold mt-2 mr-4" style={{ backgroundColor: '#b08d57', minWidth: '12px' }}></div>
-                  <span>Financing assistance</span>
-                </div>
-                <div className="flex items-start transform transition-transform duration-300 hover:translate-x-[5px]">
-                  <div className="w-3 h-3 rounded-full bg-primary-gold mt-2 mr-4" style={{ backgroundColor: '#b08d57', minWidth: '12px' }}></div>
-                  <span>Personalized service — all in English</span>
-                </div>
-              </div>
             </div>
           </AnimatedBox>
 

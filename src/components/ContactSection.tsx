@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Globe } from 'lucide-react';
 import AnimatedBox from './AnimatedBox';
 
 const ContactSection = () => {
@@ -27,7 +27,7 @@ const ContactSection = () => {
           name,
           phone,
           email,
-          serviceType: 'לא צוין',
+          serviceType: 'Not specified',
           message,
           source: 'contact-form'
         }),
@@ -36,7 +36,7 @@ const ContactSection = () => {
       const result = await response.json();
       
       if (!response.ok) {
-        throw new Error(result.message || 'אירעה שגיאה בשליחת הטופס');
+        throw new Error(result.message || 'An error occurred while submitting the form');
       }
       
       setSubmitted(true);
@@ -51,7 +51,7 @@ const ContactSection = () => {
       }, 5000);
     } catch (error) {
       console.error('Form submission error:', error);
-      alert('אירעה שגיאה בשליחת הטופס, נסה שנית');
+      alert('An error occurred while submitting the form, please try again');
     } finally {
       setIsSubmitting(false);
     }
@@ -60,37 +60,35 @@ const ContactSection = () => {
   const contactInfo = [
     {
       icon: <Phone size={24} />,
-      title: "טלפון",
-      value: "050-2230066",
-      href: "tel:0502230066",
-      description: "זמין בימים א׳-ה׳, 9:00-19:00"
+      title: "Phone / WhatsApp",
+      value: "+972-54-430-2066",
+      href: "tel:+972544302066"
+    },
+    {
+      icon: <Globe size={24} />,
+      title: "Website",
+      value: "www.lipiner.co.il",
+      href: "https://www.lipiner.co.il"
     },
     {
       icon: <Mail size={24} />,
-      title: "דוא\"ל",
-      value: "lipiner10@gmail.com",
-      href: "mailto:lipiner10@gmail.com",
-      description: "מענה תוך 24 שעות"
-    },
-    {
-      icon: <MapPin size={24} />,
-      title: "משרד",
-      value: "ורדינון אליעזר 3, פתח תקווה",
-      href: "https://maps.google.com/?q=ורדינון+אליעזר+3+פתח+תקווה",
-      description: "פגישות בתיאום מראש"
+      title: "Email",
+      value: "win4you2@gmail.com",
+      href: "mailto:win4you2@gmail.com"
     }
   ];
   
   return (
     <section id="contact" className="py-16 md:py-24 bg-secondary-gray">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="max-w-4xl mx-auto mb-16">
+        <div className="max-w-4xl mx-auto mb-12">
           <AnimatedBox animation="fadeIn">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4">
-              <span className="text-primary-gold">נתחיל יחד</span> את הדרך לעסקה מוצלחת
+            <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-center mb-4">
+              <span className="text-primary-gold">Contact the Office</span>
             </h2>
-            <p className="text-lg md:text-xl text-center text-gray-700 max-w-2xl mx-auto">
-              השאירו פרטים ואחזור אליכם תוך 24 שעות לתיאום פגישת ייעוץ ראשונית ללא עלות
+            <p className="text-lg md:text-xl text-center text-gray-700 max-w-3xl mx-auto">
+              Attorneys Yaron Fuks & Avi Lipiner<br />
+              Offices in Petah Tikva, Israel | Serving clients across the U.S.
             </p>
           </AnimatedBox>
         </div>
@@ -106,17 +104,17 @@ const ContactSection = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h4 className="text-lg font-semibold text-gray-800 mb-2">תודה על פנייתך!</h4>
-                  <p className="text-gray-600">אצור איתך קשר בהקדם.</p>
+                  <h4 className="text-lg font-semibold text-gray-800 mb-2">Thank you for contacting us!</h4>
+                  <p className="text-gray-600">We'll be in touch shortly.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="transition-all duration-300 hover:translate-y-[-2px]">
-                      <label className="block text-gray-700 text-right mb-1">שם מלא</label>
+                      <label className="block text-gray-700 text-left mb-1">Full Name</label>
                       <input 
                         type="text" 
-                        placeholder="הזן/י את שמך המלא" 
+                        placeholder="Enter your full name" 
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold/50 focus:border-primary-gold/50 transition"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
@@ -124,10 +122,10 @@ const ContactSection = () => {
                       />
                     </div>
                     <div className="transition-all duration-300 hover:translate-y-[-2px]">
-                      <label className="block text-gray-700 text-right mb-1">טלפון נייד</label>
+                      <label className="block text-gray-700 text-left mb-1">Phone Number</label>
                       <input 
                         type="tel" 
-                        placeholder="הזן/י מספר טלפון נייד" 
+                        placeholder="Enter your phone number" 
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold/50 focus:border-primary-gold/50 transition"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
@@ -136,19 +134,19 @@ const ContactSection = () => {
                     </div>
                   </div>
                   <div className="transition-all duration-300 hover:translate-y-[-2px]">
-                    <label className="block text-gray-700 text-right mb-1">דוא"ל</label>
+                    <label className="block text-gray-700 text-left mb-1">Email</label>
                     <input 
                       type="email" 
-                      placeholder="הזן/י כתובת דוא״ל" 
+                      placeholder="Enter your email address" 
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold/50 focus:border-primary-gold/50 transition"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                   <div className="transition-all duration-300 hover:translate-y-[-2px]">
-                    <label className="block text-gray-700 text-right mb-1">הודעה</label>
+                    <label className="block text-gray-700 text-left mb-1">Message</label>
                     <textarea 
-                      placeholder="הזן/י את הודעתך" 
+                      placeholder="Enter your message" 
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-gold/50 focus:border-primary-gold/50 transition h-32"
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
@@ -161,26 +159,26 @@ const ContactSection = () => {
                     disabled={isSubmitting}
                   >
                     <span className="relative z-10">
-                      {isSubmitting ? 'שולח...' : 'שלח הודעה'}
+                      {isSubmitting ? 'Sending...' : 'Send Message'}
                     </span>
                     <span className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
                   </button>
                 </form>
               )}
               <p className="text-xs text-gray-500 mt-4 text-center">
-                הפרטים שלך מאובטחים ולא יועברו לגורם שלישי.
+                Your information is secure and will not be shared with third parties.
               </p>
             </div>
           </AnimatedBox>
           
           {/* Contact Cards */}
-          <AnimatedBox animation="slideInRight" className="w-full mt-16">
+          <AnimatedBox animation="slideInLeft" className="w-full mt-16">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="bg-primary-gold p-4 text-white">
-                <h3 className="text-xl font-semibold text-center">דרכי התקשרות</h3>
+                <h3 className="text-xl font-semibold text-center">Contact Information</h3>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x md:divide-x-reverse divide-gray-100">
+              <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
                 {contactInfo.map((item, index) => (
                   <div key={index} className="p-5 hover:bg-gray-50 transition-colors duration-200">
                     <div className="flex flex-col items-center text-center">
@@ -198,21 +196,11 @@ const ContactSection = () => {
                           {item.value}
                         </a>
                       ) : (
-                        <p className="text-gray-600 mb-1">{item.value}</p>
+                        <span className="text-primary-gold block mb-1">{item.value}</span>
                       )}
-                      <p className="text-sm text-gray-500">{item.description}</p>
                     </div>
                   </div>
                 ))}
-              </div>
-              
-              <div className="p-4 bg-gray-50 border-t border-gray-100">
-                <div className="flex items-center justify-center">
-                  <Clock size={20} className="text-primary-gold ml-2" />
-                  <p className="text-gray-700 text-center">
-                    <span className="font-semibold">שעות פעילות:</span> ימים א׳-ה׳, 9:00-19:00
-                  </p>
-                </div>
               </div>
             </div>
           </AnimatedBox>

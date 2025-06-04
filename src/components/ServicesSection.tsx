@@ -10,73 +10,37 @@ const ServicesSection = () => {
       icon: <HomeIcon size={36} className="text-primary-gold" />,
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=2712",
       title: "Real Estate Transactions",
-      description: "Legal representation for purchasing or selling property in Israel, including contract negotiation, due diligence, and land registration.",
-      benefits: [
-        "Comprehensive property due diligence and contract review",
-        "Early identification of legal risks and issues",
-        "Customized contract protection for your interests"
-      ],
-      statistic: "Full legal representation throughout the entire property transaction process"
+      description: "Legal representation for purchasing or selling property in Israel, including contract negotiation, due diligence, and land registration."
     },
     {
       icon: <Calculator size={36} className="text-primary-gold" />,
       image: "https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&q=80&w=3540",
       title: "Financing Assistance",
-      description: "Support in obtaining Israeli mortgages, coordinating with local banks, and leveraging U.S.-based income or assets for financing.",
-      benefits: [
-        "Optimal financing terms tailored to your needs",
-        "Savings of thousands on interest and costs",
-        "Full coordination with banks through fund transfers"
-      ],
-      statistic: "Expert assistance in securing optimal financing terms suited to your financial capabilities"
+      description: "Support in obtaining Israeli mortgages, coordinating with local banks, and leveraging U.S.-based income or assets for financing."
     },
     {
       icon: <Shield size={36} className="text-primary-gold" />,
       image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=3546",
       title: "Foreign Buyers Tax Guidance",
-      description: "Advisory on Israeli purchase taxes, capital gains, and compliance obligations for non-resident buyers.",
-      benefits: [
-        "100% success in proper tax registration and compliance",
-        "Complete handling of tax reports and required payments",
-        "Full legal certainty in property ownership"
-      ],
-      statistic: "Complete tax guidance and compliance for non-resident property buyers"
+      description: "Advisory on Israeli purchase taxes, capital gains, and compliance obligations for non-resident buyers."
     },
     {
       icon: <FileText size={36} className="text-primary-gold" />,
       image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=2712",
       title: "Wills and Enduring Power of Attorney",
-      description: "Preparation of legally valid documents under Israeli law, including halachic and civil considerations, for asset protection and future planning.",
-      benefits: [
-        "Documents valid under both Israeli civil and religious law",
-        "Comprehensive asset protection strategies",
-        "Clear succession planning for Israeli assets"
-      ],
-      statistic: "Expert preparation of Israeli wills and power of attorney documents"
+      description: "Preparation of legally valid documents under Israeli law, including halachic and civil considerations, for asset protection and future planning."
     },
     {
       icon: <Users size={36} className="text-primary-gold" />,
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2712",
       title: "Home Visits and Remote Legal Services",
-      description: "In-person consultations for local clients and secure remote services for international clients, elderly individuals, or those with limited mobility.",
-      benefits: [
-        "Flexible service delivery options",
-        "Secure remote consultation capabilities",
-        "Personalized attention regardless of location"
-      ],
-      statistic: "Convenient legal services delivered to your location or remotely"
+      description: "In-person consultations for local clients and secure remote services for international clients, elderly individuals, or those with limited mobility."
     },
     {
       icon: <Briefcase size={36} className="text-primary-gold" />,
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=2712",
       title: "Business Law and Corporate Services",
-      description: "Formation of Israeli companies and legal entities, acquisition of businesses and commercial properties, drafting and review of commercial contracts, tax planning, including cross-border tax considerations.",
-      benefits: [
-        "Complete business formation and setup services",
-        "Cross-border tax planning and optimization",
-        "Commercial contract drafting and review"
-      ],
-      statistic: "Full-service business law support for American investors in Israel"
+      description: "Formation of Israeli companies and legal entities, acquisition of businesses and commercial properties, drafting and review of commercial contracts, tax planning, including cross-border tax considerations."
     }
   ];
 
@@ -93,7 +57,7 @@ const ServicesSection = () => {
     <section id="services" className="section-padding py-16 bg-primary-light relative">
       <div className="container mx-auto px-5 md:px-8">
         <AnimatedBox animation="fadeIn">
-          <h2 className="section-title text-center mx-auto text-3xl md:text-5xl mb-3 flex justify-center">Our Services Include:</h2>
+          <h2 className="section-title text-center mx-auto text-3xl md:text-5xl mb-3 flex justify-center">Our Services</h2>
           <p className="text-center text-lg text-black/80 max-w-4xl mx-auto">
             We provide comprehensive legal support for Americans investing in Israel, from initial consultation to successful transaction completion, protecting your interests every step of the way.
           </p>
@@ -124,15 +88,7 @@ const ServicesSection = () => {
                 
                 <div className="p-6 flex flex-col flex-grow text-left">
                   <h3 className="text-2xl font-bold mb-3 text-primary-gold">{service.title}</h3>
-                  <p className="text-black mb-4 leading-relaxed">{service.description}</p>
-                  
-                  <div className="mt-auto">
-                    <div className="p-4 bg-secondary-gray rounded-lg">
-                      <p className="text-sm font-medium text-black">
-                        {service.statistic}
-                      </p>
-                    </div>
-                  </div>
+                  <p className="text-black mb-4 leading-relaxed flex-grow">{service.description}</p>
                 </div>
               </div>
             </AnimatedBox>
@@ -199,21 +155,6 @@ const ServicesSection = () => {
                     <div className="p-5 text-left">
                       <h3 className="text-2xl font-bold mb-3 text-primary-gold">{service.title}</h3>
                       <p className="text-black mb-4 text-sm leading-relaxed">{service.description}</p>
-                      
-                      <ul className="mb-4 space-y-2">
-                        {service.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-start">
-                            <div className="text-primary-gold mr-2 mt-1 flex-shrink-0">•</div>
-                            <span className="text-sm text-left">{benefit}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      
-                      <div className="p-3 bg-secondary-gray rounded-lg">
-                        <p className="text-sm font-medium text-black">
-                          {service.statistic}
-                        </p>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -221,16 +162,6 @@ const ServicesSection = () => {
             </div>
           </div>
         </div>
-        
-        <AnimatedBox animation="fadeIn" delay={500} className="mt-12 text-center">
-          <a 
-            href="#contact" 
-            className="inline-block py-4 px-10 bg-primary-navy text-primary-light font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:bg-primary-navy/90 text-xl"
-            aria-label="Contact us for more information about our legal services"
-          >
-            Contact Us for More Information
-          </a>
-        </AnimatedBox>
       </div>
 
       {/* Decorative elements */}

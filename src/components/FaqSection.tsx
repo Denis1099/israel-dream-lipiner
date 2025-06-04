@@ -1,147 +1,106 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronDown, HelpCircle } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 import AnimatedBox from './AnimatedBox';
 
-interface FaqItem {
-  question: string;
-  answer: string;
-  id?: string;
-}
+const FaqSection = () => {
+  const [openQuestion, setOpenQuestion] = useState<number | null>(null);
 
-const FaqSection: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-  
-  const faqs: FaqItem[] = [{
-    question: "מתי כדאי לפנות לעורך דין בעסקת מכר דירה?",
-    answer: "מומלץ לפנות לעורך דין כבר בשלב הפנייה וההתייעצות טרם הרכישה המתוכננת, לפני חתימה על כל מסמך מחייב. ליווי משפטי מהשלבים המוקדמים מאפשר לזהות בעיות פוטנציאליות, לנהל משא ומתן יעיל יותר, ולהבטיח שהאינטרסים שלכם מוגנים מההתחלה. המשרד שלנו מספק מענה הוליסטי הן בפן המשפטי והן בפן המימוני של העסקה כבר משלבים אלו.",
-    id: "when-to-contact"
-  }, {
-    question: "מה כולל הליווי המשפטי בעסקת מכר דירה?",
-    answer: "הליווי כולל: בדיקות מקדימות של הנכס והזכויות, ניסוח או בדיקת חוזה המכר, ליווי במשא ומתן, טיפול בהיבטים הפיננסיים והמשכנתא, תיאום העברות כספים, דיווחים לרשויות המס, וטיפול ברישום הזכויות בטאבו. אני מלווה את הלקוחות שלי באופן אישי לאורך כל התהליך, מהמשא ומתן ועד לקבלת המפתח.",
-    id: "what-includes"
-  }, {
-    question: "כמה עולה ליווי משפטי בעסקת מכר דירה?",
-    answer: "עלות הליווי המשפטי נקבעת בהתאם למורכבות העסקה ולהיקף השירותים הנדרשים. בפגישת הייעוץ הראשונית (ללא עלות) אוכל לבחון את פרטי העסקה שלכם ולהציע הצעת מחיר מדויקת ושקופה. חשוב לזכור שהשקעה בליווי משפטי מקצועי עשויה לחסוך לכם הרבה כסף, זמן וכאב ראש בהמשך.",
-    id: "cost"
-  }, {
-    question: "מה ההבדל בין ליווי של עו\"ד מקרקעין מנוסה לעומת עו\"ד כללי?",
-    answer: "עו\"ד מקרקעין מתמחה בעל ניסיון ספציפי בתחום מכיר לעומק את כל המורכבויות והמלכודות בעסקאות נדל\"ן. במקרה שלי, משרד עו\"ד אברהם ליפינר הינו משרד בוטיק המתמחה בדיני מקרקעין. כיועץ משכנתאות מוסמך ובעל רישיון תיווך, בנוסף להשכלה אקדמית במשפטים ובמנהל עסקים, אני מביא לשולחן פרספקטיבה ייחודית הכוללת הבנה עמוקה של היבטים משפטיים, פיננסיים ומסחריים בשוק הנדל\"ן - מה שמאפשר לי לזהות סיכונים, למקסם הזדמנויות, ולהבטיח שהעסקה מתאימה ליכולות ולצרכים שלכם.",
-    id: "difference"
-  }, {
-    question: "כמה זמן אורכת עסקת מכר דירה מתחילתה ועד סופה?",
-    answer: "משך הזמן הממוצע של עסקת מכר דירה נע בין חודשיים לארבעה חודשים, מהחתימה על החוזה ועד להעברת הזכויות בטאבו. הזמן המדויק תלוי במספר גורמים, כולל מורכבות העסקה, מימון במשכנתא, ולוחות הזמנים של הצדדים. בליווי מקצועי, אני פועל לייעל את התהליך ולמנוע עיכובים מיותרים.",
-    id: "timeline"
-  }, {
-    question: "האם אתם מטפלים בעסקאות בכל רחבי הארץ?",
-    answer: "כן, אני מטפל בעסקאות מכר בכל רחבי הארץ. לנוחות הלקוחות, אני מציע גם אפשרות לפגישות בבית הלקוח. בנוסף, אני עובד בשיתוף פעולה עם עו\"ד ירון פוקס, מה שמאפשר לנו להעניק שירות מקיף ואיכותי בכל מקום.",
-    id: "locations"
-  }];
-
-  // Check if there's a hash in the URL to open a specific FAQ
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const id = hash.replace('#', '');
-      const index = faqs.findIndex(faq => faq.id === id);
-      if (index !== -1) {
-        setOpenIndex(index);
-      }
-    }
-  }, []);
-
-  const toggleAccordion = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-    
-    // Update URL hash when opening a FAQ
-    if (openIndex !== index && faqs[index].id) {
-      window.history.pushState(null, '', `#${faqs[index].id}`);
-    } else {
-      window.history.pushState(null, '', window.location.pathname);
-    }
+  const toggleQuestion = (index: number) => {
+    setOpenQuestion(openQuestion === index ? null : index);
   };
 
-
+  const faqs = [
+    {
+      question: "Can US citizens buy property in Israel without traveling there?",
+      answer: "Yes, most of the transaction can be completed remotely through power of attorney documents, video consultations, and digital signatures. We regularly assist clients who complete their entire purchase from the United States, though we recommend at least one property viewing trip when possible."
+    },
+    {
+      question: "When should I contact an attorney for my Israeli real estate transaction?",
+      answer: "It's crucial to contact an attorney before signing any documents or making any payments. Early legal guidance allows us to identify potential issues, strengthen your negotiating position, and ensure your interests are protected from the beginning. Our initial consultation is provided at no cost."
+    },
+    {
+      question: "What does your legal representation include?",
+      answer: "Our representation covers the entire transaction: preliminary property inspections, contract drafting and review, negotiation support, mortgage assistance, coordination of fund transfers, tax authority reporting, and land registry procedures. We guide you personally through each step, from initial negotiations to receiving your keys."
+    },
+    {
+      question: "How do inheritance laws affect American property owners in Israel?",
+      answer: "Israeli inheritance law differs significantly from US law. We prepare appropriate wills for Israeli assets that work in conjunction with your US estate planning, ensuring your wishes are honored in both jurisdictions and your heirs are properly protected."
+    },
+    {
+      question: "What makes your firm particularly suited for American investors?",
+      answer: "Beyond fluent English, we have deep understanding of both US and Israeli legal systems, extensive experience with cross-border transactions, and established relationships with US tax professionals. Our boutique structure means you work directly with senior attorneys who understand the unique needs of American investors."
+    },
+    {
+      question: "Do you handle transactions throughout Israel?",
+      answer: "Yes, we handle transactions anywhere in Israel, with extensive experience in Jerusalem, Tel Aviv, central Israel, and Judea & Samaria. We offer both in-person consultations and remote services to accommodate clients regardless of location."
+    }
+  ];
 
   return (
-    <section id="faq" className="section-padding py-16 bg-secondary-gray relative overflow-hidden">
-      <div className="container mx-auto px-5 md:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-          <div className="lg:col-span-4">
-            <AnimatedBox animation="slideInRight">
-              <h2 className="section-title text-3xl md:text-5xl mb-4">שאלות נפוצות בעסקאות מכר דירות</h2>
-              
-              <p className="text-lg text-black/80 mb-8">
-                כאן תוכלו למצוא תשובות לשאלות הנפוצות ביותר בנוגע לליווי משפטי בעסקאות נדל"ן
-              </p>
-              
-              <div className="relative hidden lg:block">
-                <div className="relative z-10">
-                  <div className="relative bg-primary-gold/10 rounded-full p-5 inline-block">
-                    <HelpCircle size={100} className="text-primary-gold" />
-                  </div>
-                </div>
-                <div className="absolute top-20 right-8 w-40 h-40 bg-primary-gold/5 rounded-full -z-10"></div>
-              </div>
-            </AnimatedBox>
-          </div>
-          
-          <div className="lg:col-span-8">
-            <AnimatedBox animation="slideInLeft" delay={200} className="space-y-4">
-              {faqs.map((faq, index) => (
-                  <div 
-                    key={index} 
-                    id={faq.id}
-                    className={cn(
-                      "border border-gray-200 rounded-lg overflow-hidden transition-all duration-300",
-                      openIndex === index 
-                        ? "shadow-md border-primary-gold/30" 
-                        : "shadow-sm hover:border-primary-gold/20"
-                    )}
-                  >
-                    <button 
-                      onClick={() => toggleAccordion(index)} 
-                      className="w-full px-6 py-5 text-right flex justify-between items-center bg-white hover:bg-gray-50 transition-colors duration-200"
-                      aria-expanded={openIndex === index}
-                      aria-controls={`faq-answer-${index}`}
-                    >
-                      <span className="text-xl text-primary-gold font-bold pr-2 border-r-4 border-primary-gold">
-                        {faq.question}
-                      </span>
-                      <div className={cn(
-                        "bg-primary-gold/10 rounded-full p-2 transition-transform duration-300",
-                        openIndex === index ? "transform rotate-180" : ""
-                      )}>
-                        <ChevronDown className="text-primary-gold" size={20} />
-                      </div>
-                    </button>
-                    <div 
-                      id={`faq-answer-${index}`}
-                      className={cn(
-                        "overflow-hidden transition-all duration-300 ease-in-out bg-white",
-                        openIndex === index ? "max-h-[1000px] py-5 px-8" : "max-h-0"
+    <section id="faq" className="py-16 md:py-24 bg-primary-light relative overflow-hidden">
+      <div className="container mx-auto px-6 md:px-8">
+        <AnimatedBox animation="fadeIn" className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            <span className="text-primary-navy">Frequently Asked Questions</span>{' '}
+            <span className="text-primary-gold">About Israeli Real Estate Transactions</span>
+          </h2>
+          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+            Here you can find answers to the most common questions regarding legal guidance in real estate transactions
+          </p>
+        </AnimatedBox>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <AnimatedBox 
+                key={index} 
+                animation="slideUp" 
+                delay={index * 100}
+                className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              >
+                <button
+                  onClick={() => toggleQuestion(index)}
+                  className="w-full px-6 py-6 text-left focus:outline-none focus:ring-2 focus:ring-primary-gold/50 rounded-xl transition-colors duration-200 hover:bg-gray-50"
+                  aria-expanded={openQuestion === index}
+                  aria-controls={`faq-answer-${index}`}
+                >
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-xl font-bold text-primary-gold font-inter pr-4">
+                      {faq.question}
+                    </h3>
+                    <div className="flex-shrink-0 ml-4">
+                      {openQuestion === index ? (
+                        <ChevronUp size={24} className="text-primary-gold" />
+                      ) : (
+                        <ChevronDown size={24} className="text-primary-gold" />
                       )}
-                    >
-                      <p className="text-black text-lg leading-relaxed">{faq.answer}</p>
                     </div>
                   </div>
-                ))}
-            </AnimatedBox>
-            
-
+                </button>
+                
+                <div
+                  id={`faq-answer-${index}`}
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    openQuestion === index 
+                      ? 'max-h-96 opacity-100' 
+                      : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className="px-6 pb-6">
+                    <p className="text-gray-700 leading-relaxed font-inter">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </div>
+              </AnimatedBox>
+            ))}
           </div>
         </div>
       </div>
-      
+
       {/* Decorative elements */}
-      <div 
-        className="absolute bottom-10 left-5 w-32 h-32 bg-primary-gold/5 rounded-full" 
-        aria-hidden="true"
-      ></div>
-      <div 
-        className="absolute top-40 right-5 w-24 h-24 bg-primary-gold/5 rounded-full"
-        aria-hidden="true"
-      ></div>
+      <div className="absolute top-20 right-10 w-64 h-64 bg-primary-gold/5 rounded-full" aria-hidden="true"></div>
+      <div className="absolute bottom-10 left-10 w-48 h-48 bg-primary-navy/5 rounded-full" aria-hidden="true"></div>
     </section>
   );
 };

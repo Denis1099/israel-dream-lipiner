@@ -85,8 +85,8 @@ const MobileNav: React.FC<MobileNavProps> = ({
               }}
               className="flex items-center justify-center w-full px-4 py-3 text-white bg-primary-gold hover:bg-primary-gold/90 rounded-md text-lg font-medium transition-all duration-200"
             >
-              התקשרו עכשיו - 050-2230066
-              <Phone size={18} className="mr-2" />
+              Contact Us Now
+              <Phone size={18} className="ml-2" />
             </button>
           </div>
         </div>

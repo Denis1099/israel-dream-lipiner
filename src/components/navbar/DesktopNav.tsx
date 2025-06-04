@@ -50,8 +50,8 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ activeSection, scrolled, navLin
           onClick={() => scrollToSection('contact')}
           className="bg-primary-gold hover:bg-primary-gold/90 text-white px-4 py-2 rounded-md text-lg font-medium transition-all duration-300 flex items-center shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0"
         >
-          התקשרו עכשיו
-          <Phone size={18} className="mr-2" />
+          Contact Us Now
+          <Phone size={18} className="ml-2" />
         </button>
       </div>
     </>
