@@ -28,7 +28,7 @@ const LeadForm: React.FC<LeadFormProps> = ({ onSuccess, className = '' }) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://real-estate.lipiner.co.il/api/submit-lead.php', {
+      const response = await fetch('https://israel-dream.lipiner.co.il/submit-lead.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

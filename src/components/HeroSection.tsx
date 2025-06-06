@@ -31,7 +31,7 @@ const HeroSection = () => {
     
     try {
       console.log('Submitting form...', { name, phone });
-      const response = await fetch('https://real-estate.lipiner.co.il/api/submit-lead.php', {
+      const response = await fetch('https://israel-dream.lipiner.co.il/submit-lead.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ const HeroSection = () => {
           email: 'no-email@provided.com',
           serviceType: 'Not specified',
           message: '',
-          source: 'hero-form'
+          source: 'israel-dream-hero'
         }),
       });
       
@@ -118,7 +118,7 @@ const HeroSection = () => {
             
             <div className="text-lg md:text-xl text-primary-light mb-8 max-w-2xl lg:mx-0 mx-auto font-inter leading-relaxed" style={{ color: '#fbfbfb' }}>
               <p>
-                Attorneys Yaron Fuks and Avi Lipiner guide Americans through Israeli property purchases, business ventures, and investments. Expert legal support and financing assistance — all in English.
+              Expert guidance for property purchases, business ventures, and investments. Comprehensive legal support and financing assistance — all in English.
               </p>
             </div>
           </AnimatedBox>

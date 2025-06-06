@@ -102,14 +102,14 @@ const ContactForm: React.FC<ContactFormProps> = ({
     
     try {
       // Send data to Hostinger PHP endpoint
-      const response = await fetch('https://your-domain.com/api/submit-lead.php', {
+      const response = await fetch('https://israel-dream.lipiner.co.il/submit-lead.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           ...formData,
-          source: simplified ? 'hero-form' : 'contact-form'
+          source: simplified ? 'israel-dream-hero' : 'israel-dream-contact'
         }),
       });
       

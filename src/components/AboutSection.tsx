@@ -5,12 +5,10 @@ import AnimatedBox from './AnimatedBox';
 const AboutSection = () => {
   // Why Choose Our Firm points
   const whyChoosePoints = [
-    'Over 20 years of experience in Israeli real estate and business law',
-    'Fluent English and in-depth understanding of U.S.–Israel legal intersections',
-    'Hundreds of successful transactions completed',
-    'Experience across Jerusalem, central Israel, and Judea & Samaria',
-    'Attentive, individualized service tailored to American investors',
-    'Clear and respectful communication throughout each legal matter'
+    '500+ successful American client transactions',
+    'Deep expertise in U.S.-Israel legal intersections ',
+    'Coverage across Jerusalem, Tel Aviv, and Judea & Samaria',
+    'Direct access to senior partners, not junior associates',  
   ];
 
   return (
@@ -19,7 +17,7 @@ const AboutSection = () => {
         {/* Desktop layout */}
         <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-16">
           {/* Left column (image) - Only visible on desktop */}
-          <div className="hidden lg:block lg:w-5/12">
+          <div className="hidden lg:block lg:w-4/12">
             <AnimatedBox animation="slideInLeft">
               <div className="relative h-full flex items-start">
                 <div 
@@ -30,7 +28,7 @@ const AboutSection = () => {
                   <img 
                     src="/lovable-uploads/avi-image.webp" 
                     alt="Attorney Avi Lipiner" 
-                    className="w-full h-auto relative z-10 object-cover"
+                    className="w-auto h-auto relative z-10 object-cover"
                     style={{ 
                       aspectRatio: '3/4.5',
                       filter: 'contrast(1.08) saturate(1.08) brightness(1.02)',
@@ -74,10 +72,12 @@ const AboutSection = () => {
               
               <div className="text-black space-y-4 mb-6 md:mb-8" style={{ lineHeight: '1.6' }}>
                 <p className="text-base md:text-lg font-medium">
-                  The firm is led by Attorneys Yaron Fuks and Avi Lipiner, experienced Israeli real estate and business lawyers who have represented numerous U.S. individuals and families in purchasing property, acquiring businesses, launching ventures, and protecting assets in Israel.
+                Attorneys Yaron Fuks and Avi Lipiner lead our firm with 20+ years of experience 
+                helping American families navigate Israeli real estate and business investments.
                 </p>
                 <p className="text-base md:text-lg font-medium">
-                  Supported by four legal interns and junior associates, with a dedicated office secretary ensuring timely communication, our boutique structure allows for focused, client-centered legal solutions.
+                Supported by four associates and dedicated staff, we provide personalized, 
+                boutique legal solutions entirely in English.
                 </p>
               </div>
             </AnimatedBox>
@@ -145,25 +145,27 @@ const AboutSection = () => {
                   ))}
                 </ul>
               </div>
+              
+            </AnimatedBox>
+            
+            {/* Signature section */}
+            <AnimatedBox animation="fadeIn" delay={600}>
+              <div className="mt-8 md:mt-12 flex justify-center">
+                <div className="w-52 md:w-64">
+                  <img 
+                    src="/lovable-uploads/avi-lipiner-signature.webp" 
+                    alt="Attorney Avi Lipiner Signature" 
+                    className="w-full h-auto"
+                    width="256"
+                    height="100"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
             </AnimatedBox>
           </div>
         </div>
-        
-        {/* Signature section */}
-        <AnimatedBox animation="fadeIn" delay={600}>
-          <div className="mt-8 md:mt-12 flex justify-center">
-            <div className="w-52 md:w-64">
-              <img 
-                src="/lovable-uploads/avi-lipiner-signature.webp" 
-                alt="Attorney Avi Lipiner Signature" 
-                className="w-full h-auto"
-                width="256"
-                height="100"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </AnimatedBox>
+
       </div>
       
       {/* Decorative elements */}

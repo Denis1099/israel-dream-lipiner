@@ -7,39 +7,41 @@ const TestimonialsSection = () => {
   
   const testimonials = [
     {
-      name: "Michael & Sarah R.",
+      name: "Sarah M.",
       location: "New York → Jerusalem Property Purchase",
       rating: 5,
-      text: "Attorney Avi Lipiner guided us through our first property purchase in Israel. As a young American couple, we were inexperienced and very concerned about the process. Avi led us step by step, explained every stage clearly, and made us feel confident. His financial knowledge saved us tens of thousands of dollars on our mortgage!",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=2650"
+      text: "Attorney Avi Lipiner guided me through my first property purchase in Israel. As a young professional from New York, I was overwhelmed by the process. Avi explained every step clearly and his financial expertise saved me thousands on my mortgage. Couldn't have done it without him!",
+      image: "https://images.unsplash.com/photo-1745434159123-4908d0b9df94?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       name: "David & Rachel K.",
       location: "Los Angeles → Tel Aviv Investment Sale",
       rating: 5,
       text: "We sold our investment property that we had owned for about 30 years. Avi knew how to handle all the complexities related to capital gains tax for US citizens, coordination with the bank, and the special requirements of the buyers. Everything went smoothly and far beyond what we expected.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=2340"
+      image: "https://images.unsplash.com/photo-1618333858238-c174ee56a54d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      name: "Jonathan & Lisa S.",
+      name: "Lisa S.",
       location: "Chicago → Jerusalem Property Purchase",
       rating: 5,
-      text: "Our transaction was particularly complex and involved property division and challenging legal issues with multiple heirs. Avi demonstrated exceptional professionalism, knew how to deal with all the issues that arose, and managed to bring the transaction to a successful conclusion.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=2340"
+      text: "As a single mother planning aliyah, I needed extra support navigating the Jerusalem property market. Avi was patient, thorough, and always available to answer my questions. He made what seemed impossible feel manageable and secure.",
+      image: "https://images.unsplash.com/photo-1544806722-0bf6ffad1844?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      name: "Robert & Jennifer M.",
+      name: "Robert Chen",
       location: "San Francisco → Netanya Investment",
       rating: 5,
-      text: "As Americans investing in Israeli real estate from California, we needed someone who understood both legal systems. Avi's bilingual expertise, remote consultation capabilities, and understanding of US-Israel legal intersections made our investment process seamless and stress-free.",
+      text: "Managing my parents' estate and property sale from California was daunting. Avi handled everything with sensitivity and professionalism, coordinating between multiple family members and ensuring all legal requirements were met perfectly."
+,
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=2487"
     },
     {
-      name: "Steven & Rebecca F.",
+      name: "Steven F.",
       location: "New York → Tel Aviv Business Formation",
       rating: 5,
-      text: "We established our Israeli business entity with Avi's guidance. His comprehensive understanding of cross-border tax implications and Israeli business law helped us structure everything properly from the start. Highly recommend for any American looking to invest in Israel.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=2340"
+      text: "I established my Israeli tech startup with Avi's guidance. His understanding of both US LLC structures and Israeli business law helped me avoid costly mistakes. His cross-border expertise was exactly what I needed as an American entrepreneur."
+,
+      image: "https://images.unsplash.com/photo-1730458001105-2c363a8c9c6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRlY2glMjBlbnRyZXByZW5ldXIlMjBwb3J0cmFpdHxlbnwwfHwwfHx8MA%3D%3D"
     }
   ];
 

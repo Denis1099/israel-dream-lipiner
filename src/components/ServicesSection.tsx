@@ -8,37 +8,37 @@ const ServicesSection = () => {
   const services = [
     {
       icon: <HomeIcon size={36} className="text-primary-gold" />,
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=2712",
+      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=3546",
       title: "Real Estate Transactions",
       description: "Legal representation for purchasing or selling property in Israel, including contract negotiation, due diligence, and land registration."
     },
     {
       icon: <Calculator size={36} className="text-primary-gold" />,
-      image: "https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&q=80&w=3540",
+      image: "https://images.unsplash.com/photo-1671469898928-c0abb429a358?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Financing Assistance",
       description: "Support in obtaining Israeli mortgages, coordinating with local banks, and leveraging U.S.-based income or assets for financing."
     },
     {
       icon: <Shield size={36} className="text-primary-gold" />,
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=3546",
+      image: "https://images.unsplash.com/photo-1586486855514-8c633cc6fd38?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Foreign Buyers Tax Guidance",
       description: "Advisory on Israeli purchase taxes, capital gains, and compliance obligations for non-resident buyers."
     },
     {
       icon: <FileText size={36} className="text-primary-gold" />,
-      image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=2712",
+      image: "https://images.unsplash.com/photo-1562564055-71e051d33c19?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Wills and Enduring Power of Attorney",
       description: "Preparation of legally valid documents under Israeli law, including halachic and civil considerations, for asset protection and future planning."
     },
     {
       icon: <Users size={36} className="text-primary-gold" />,
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2712",
+      image: "https://images.unsplash.com/photo-1735825764485-93a381fd5779?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Home Visits and Remote Legal Services",
       description: "In-person consultations for local clients and secure remote services for international clients, elderly individuals, or those with limited mobility."
     },
     {
       icon: <Briefcase size={36} className="text-primary-gold" />,
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=2712",
+      image: "https://images.unsplash.com/photo-1593115057322-e94b77572f20?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Business Law and Corporate Services",
       description: "Formation of Israeli companies and legal entities, acquisition of businesses and commercial properties, drafting and review of commercial contracts, tax planning, including cross-border tax considerations."
     }

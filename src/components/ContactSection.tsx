@@ -18,7 +18,7 @@ const ContactSection = () => {
     
     try {
       console.log('Submitting contact form...', { name, phone, email, message });
-      const response = await fetch('https://real-estate.lipiner.co.il/api/submit-lead.php', {
+      const response = await fetch('https://israel-dream.lipiner.co.il/submit-lead.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ const ContactSection = () => {
           email,
           serviceType: 'Not specified',
           message,
-          source: 'contact-form'
+          source: 'israel-dream-contact'
         }),
       });
       
@@ -67,8 +67,8 @@ const ContactSection = () => {
     {
       icon: <Globe size={24} />,
       title: "Website",
-      value: "www.lipiner.co.il",
-      href: "https://www.lipiner.co.il"
+      value: "israel-dream.lipiner.co.il",
+      href: "https://israel-dream.lipiner.co.il"
     },
     {
       icon: <Mail size={24} />,
