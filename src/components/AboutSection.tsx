@@ -26,16 +26,16 @@ const AboutSection = () => {
                 ></div>
                 <div className="relative rounded-lg overflow-hidden shadow-xl z-10">
                   <img 
-                    src="/lovable-uploads/avi-image.webp" 
-                    alt="Attorney Avi Lipiner" 
+                    src="/lovable-uploads/avi-and-yaron.webp" 
+                    alt="Avi Lipiner and Yaron Fuks" 
                     className="w-auto h-auto relative z-10 object-cover"
                     style={{ 
-                      aspectRatio: '3/4.5',
+                      aspectRatio: '1/1',
                       filter: 'contrast(1.08) saturate(1.08) brightness(1.02)',
                       imageRendering: 'crisp-edges'
                     }}
-                    width="600"
-                    height="800"
+                    width="500"
+                    height="500"
                     loading="lazy"
                   />
                   
@@ -92,16 +92,16 @@ const AboutSection = () => {
                   ></div>
                   <div className="relative rounded-lg overflow-hidden shadow-xl z-10">
                     <img 
-                      src="/lovable-uploads/avi-image.webp" 
-                      alt="Attorney Avi Lipiner" 
+                      src="/lovable-uploads/avi-and-yaron.webp" 
+                      alt="Avi Lipiner and Yaron Fuks" 
                       className="w-full h-auto relative z-10 object-cover"
                       style={{ 
-                        aspectRatio: '3/4',
+                        aspectRatio: '1/1',
                         filter: 'contrast(1.08) saturate(1.08) brightness(1.02)',
                         imageRendering: 'crisp-edges'
                       }}
                       width="400"
-                      height="530"
+                      height="400"
                       loading="lazy"
                     />
                     
@@ -147,24 +147,24 @@ const AboutSection = () => {
               </div>
               
             </AnimatedBox>
-            
-            {/* Signature section */}
-            <AnimatedBox animation="fadeIn" delay={600}>
-              <div className="mt-8 md:mt-12 flex justify-center">
-                <div className="w-52 md:w-64">
-                  <img 
-                    src="/lovable-uploads/avi-lipiner-signature.webp" 
-                    alt="Attorney Avi Lipiner Signature" 
-                    className="w-full h-auto"
-                    width="256"
-                    height="100"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </AnimatedBox>
           </div>
         </div>
+        
+        {/* Signature section - centered in middle */}
+        <AnimatedBox animation="fadeIn" delay={600}>
+          <div className="mt-8 md:mt-12 flex justify-center">
+            <div className="w-52 md:w-64">
+              <img 
+                src="/lovable-uploads/avi-lipiner-signature.webp" 
+                alt="Attorney Avi Lipiner Signature" 
+                className="w-full h-auto"
+                width="256"
+                height="100"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </AnimatedBox>
 
       </div>
       

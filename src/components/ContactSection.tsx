@@ -17,7 +17,6 @@ const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
-      console.log('Submitting contact form...', { name, phone, email, message });
       const response = await fetch('https://israel-dream.lipiner.co.il/submit-lead.php', {
         method: 'POST',
         headers: {

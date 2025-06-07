@@ -23,18 +23,14 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-// Database configuration (Using the same DB as requested)
-$db_host = 'localhost';
-$db_name = 'u556043506_real_estate';
-$db_user = 'u556043506_denis109';
-$db_pass = getenv('DB_PASSWORD'); // Reads 'DB_PASSWORD' set on the server
+// Load database configuration from secure config file
+define('SECURE_ACCESS', true);
+require_once __DIR__ . '/config.php';
 
-if ($db_pass === false) {
-    error_log('Database password environment variable (DB_PASSWORD) not set.');
-    http_response_code(500);
-    echo json_encode(['success' => false, 'error' => 'Server configuration error.']);
-    exit;
-}
+$db_host = DB_HOST;
+$db_name = 'u556043506_real_estate'; // Keep your actual database name
+$db_user = 'u556043506_denis109';    // Keep your actual database user
+$db_pass = DB_PASSWORD;
 
 // Email configuration
 $admin_email = 'lipiner10@gmail.com';

@@ -30,7 +30,6 @@ const HeroSection = () => {
     setIsSubmitting(true);
     
     try {
-      console.log('Submitting form...', { name, phone });
       const response = await fetch('https://israel-dream.lipiner.co.il/submit-lead.php', {
         method: 'POST',
         headers: {

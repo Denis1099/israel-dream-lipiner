@@ -1,16 +1,23 @@
 <?php
-// Database configuration
+// Database configuration - Keep this file OUTSIDE your web root!
+// Path should be: /home/denis109/client_projects/israel-dream-lipiner/backend/config.php
+
 define('DB_HOST', 'localhost');
-define('DB_USER', 'your_database_username');
-define('DB_PASS', 'your_database_password');
-define('DB_NAME', 'your_database_name');
+define('DB_NAME', 'u556043506_real_estate');
+define('DB_USER', 'u556043506_denis109');
+define('DB_PASSWORD', 'R#t5FMwQ1');
+
+// Additional security
+if (!defined('SECURE_ACCESS')) {
+    die('Direct access not allowed');
+}
 
 // Email configuration
 define('SMTP_HOST', 'smtp.hostinger.com');
 define('SMTP_PORT', 587);
-define('SMTP_USERNAME', 'your_email@lipinier.co.il');
-define('SMTP_PASSWORD', 'your_email_password');
-define('NOTIFICATION_EMAIL', 'your_email@lipinier.co.il');
+define('SMTP_USERNAME', 'lipiner10@gmail.com');  // Update with your actual email
+define('SMTP_PASSWORD', 'your_actual_email_password');  // Update with your actual password
+define('NOTIFICATION_EMAIL', 'lipiner10@gmail.com');  // Where form submissions are sent
 
 // Error reporting
 error_reporting(E_ALL);

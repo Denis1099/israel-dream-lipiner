@@ -1,8 +1,9 @@
-# Set environment variable for Database Password
-SetEnv DB_PASSWORD "R#t5FMwQ1"
-
 # Security: Block access to sensitive files
 <Files ".htaccess">
+  Require all denied
+</Files>
+
+<Files "config.php">
   Require all denied
 </Files>
 
@@ -10,13 +11,16 @@ SetEnv DB_PASSWORD "R#t5FMwQ1"
   Require all denied
 </Files>
 
+<Files "*.env">
+  Require all denied
+</Files>
+
 <Files "*.config">
   Require all denied
 </Files>
 
-# Add any other directives needed for your API or server setup below
+# Block direct access to sensitive file types
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  # Block direct access to sensitive file types
-  RewriteRule \.(log|config|htaccess)$ - [F,L]
+  RewriteRule \.(log|config|htaccess|env)$ - [F,L]
 </IfModule> 
