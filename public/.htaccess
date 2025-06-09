@@ -59,12 +59,12 @@
 <IfModule mod_expires.c>
   ExpiresActive On
   
-  # Images
-  ExpiresByType image/jpg "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/gif "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
+  # Images - reduced cache time for easier updates
+  ExpiresByType image/jpg "access plus 3 months"
+  ExpiresByType image/jpeg "access plus 3 months"
+  ExpiresByType image/gif "access plus 3 months"
+  ExpiresByType image/png "access plus 3 months"
+  ExpiresByType image/webp "access plus 3 months"
   ExpiresByType image/svg+xml "access plus 1 month"
   ExpiresByType image/x-icon "access plus 1 year"
   
@@ -85,6 +85,21 @@
   
   # Manifest files
   ExpiresByType application/manifest+json "access plus 1 week"
+</IfModule>
+
+# Cache-busting for versioned assets
+<IfModule mod_headers.c>
+  # Allow cache-busting with query parameters
+  <FilesMatch "\.(css|js|png|jpg|jpeg|gif|webp|svg)$">
+    Header set Cache-Control "public, max-age=7776000" # 3 months
+    Header unset ETag
+    FileETag None
+  </FilesMatch>
+  
+  # Force revalidation for assets with version parameters
+  <If "%{QUERY_STRING} =~ /v=/">
+    Header set Cache-Control "public, max-age=86400, must-revalidate" # 1 day
+  </If>
 </IfModule>
 
 # ====================

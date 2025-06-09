@@ -20,7 +20,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'dm-serif': ['DM Serif Display', 'serif'],
+				'merriweather': ['Merriweather', 'serif'],
 				inter: ['Inter', 'sans-serif'],
 				sans: ['Inter', 'sans-serif'],
 			},

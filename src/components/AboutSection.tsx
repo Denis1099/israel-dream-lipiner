@@ -68,7 +68,7 @@ const AboutSection = () => {
           <div className="w-full lg:w-7/12">
             {/* Title and intro paragraphs */}
             <AnimatedBox animation="slideInRight" delay={100}>
-              <h2 className="section-title mb-4 md:mb-6 text-2xl md:text-5xl leading-tight">About Our Legal Team</h2>
+              <h2 className="section-title mb-4 md:mb-6 text-3xl md:text-4xl leading-tight">About Our Legal Team</h2>
               
               <div className="text-black space-y-4 mb-6 md:mb-8" style={{ lineHeight: '1.6' }}>
                 <p className="text-base md:text-lg font-medium">
@@ -133,7 +133,7 @@ const AboutSection = () => {
             {/* Why Choose Our Firm section */}
             <AnimatedBox animation="slideUp" delay={300}>
               <div className="bg-secondary-gray rounded-xl shadow-md py-5 px-4 md:py-[30px] md:px-[30px]">
-                <h3 className="font-bold mb-4 text-primary-gold text-2xl md:text-3xl">Why Choose Our Firm</h3>
+                <h3 className="font-bold mb-4 text-primary-gold text-2xl md:text-3xl" style={{ fontWeight: '700' }}>Why Choose Our Firm</h3>
                 <ul className="space-y-3 md:space-y-4">
                   {whyChoosePoints.map((point, index) => (
                     <li key={index} className="flex items-start group">
@@ -172,7 +172,7 @@ const AboutSection = () => {
             {/* Left column (content) - Full width on mobile */}
             <div className="w-full lg:w-7/12 lg:order-1">
               <AnimatedBox animation="slideInLeft" delay={100}>
-                <h3 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-primary-gold leading-tight">
+                <h3 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-primary-gold leading-tight" style={{ fontWeight: '700' }}>
             
                   Attorney Yaron Fuks
                 </h3>

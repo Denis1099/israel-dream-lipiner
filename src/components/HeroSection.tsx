@@ -99,8 +99,8 @@ const HeroSection = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
           <AnimatedBox animation="slideInLeft" className="w-full lg:w-6/12 mb-12 lg:mb-0 text-center lg:text-left">
             <h1 
-              className="text-4xl sm:text-5xl lg:text-7xl font-bold text-primary-light leading-tight mb-6 md:mb-8 font-dm-serif relative animate-slideUp"
-              style={{ color: '#ffffff', textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}
+              className="text-4xl sm:text-5xl lg:text-7xl font-black text-primary-light leading-tight mb-6 md:mb-8 font-merriweather relative animate-slideUp"
+              style={{ color: '#ffffff', textShadow: '0 2px 4px rgba(0,0,0,0.3)', fontWeight: '900' }}
             >
               <span className="relative inline-block">
                 Your Israel Dream Starts Here
@@ -109,13 +109,13 @@ const HeroSection = () => {
             </h1>
             
             <h2 
-              className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary-gold mb-10 font-dm-serif"
-              style={{ color: '#b08d57' }}
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary-gold mb-10 font-merriweather"
+              style={{ color: '#b08d57', fontWeight: '700' }}
             >
               Trusted Legal Guidance for Americans Investing in Israel
             </h2>
             
-            <div className="text-lg md:text-xl text-primary-light mb-8 max-w-2xl lg:mx-0 mx-auto font-inter leading-relaxed" style={{ color: '#fbfbfb' }}>
+            <div className="text-lg md:text-xl text-primary-light mb-0 md:mb-8 max-w-2xl lg:mx-0 mx-auto font-inter leading-relaxed" style={{ color: '#fbfbfb' }}>
               <p>
               Expert guidance for property purchases, business ventures, and investments. Comprehensive legal support and financing assistance — all in English.
               </p>
@@ -132,7 +132,7 @@ const HeroSection = () => {
             >
               <div className="p-6 sm:p-8">
                 <h3 
-                  style={{ color: '#b08d57' }} 
+                  style={{ color: '#b08d57', fontWeight: '700' }} 
                   className="font-bold text-primary-gold mb-8 text-center text-3xl md:text-4xl relative"
                 >
                   Schedule a Free Consultation

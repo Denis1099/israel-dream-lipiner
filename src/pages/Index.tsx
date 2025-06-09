@@ -21,6 +21,18 @@ const Index = () => {
       setIsLoaded(true);
     }, 100);
 
+    // Force font loading on iOS/Safari
+    if (navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('iPad') || navigator.userAgent.includes('Safari')) {
+      // Simple approach: just ensure font weights are applied correctly on iOS
+      setTimeout(() => {
+        const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        headings.forEach(heading => {
+          const htmlHeading = heading as HTMLElement;
+          htmlHeading.style.fontWeight = '700';
+        });
+      }, 1000);
+    }
+
     return () => clearTimeout(timer);
   }, []);
 

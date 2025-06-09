@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital,wght@0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -61,8 +61,18 @@
     color: #000000; /* Explicit text color for body */
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-dm-serif font-bold text-black;
+  h1 {
+    @apply font-merriweather font-black text-black;
+    font-weight: 900 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h2, h3, h4, h5, h6 {
+    @apply font-merriweather font-bold text-black;
+    font-weight: 700 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   /* Ensure inputs have proper contrast */
@@ -86,5 +96,72 @@
     visibility: visible !important;
     color: #000000;
     background-color: #ffffff;
+  }
+
+  /* WebKit/Safari specific fixes for iOS - simplified */
+  @supports (-webkit-touch-callout: none) {
+    h1 {
+      font-weight: 900 !important;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    
+    h2, h3, h4, h5, h6 {
+      font-weight: 700 !important;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    
+    /* Force bold rendering on WebKit */
+    .font-bold,
+    h2.font-bold,
+    h3.font-bold {
+      font-weight: 700 !important;
+    }
+    
+    .font-black,
+    h1.font-black {
+      font-weight: 900 !important;
+    }
+  }
+
+  /* Ensure proper font weight on mobile devices */
+  @media screen and (max-width: 768px) {
+    /* iOS/Safari font weight fixes */
+    h1 {
+      font-weight: 900 !important;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    h2, h3, h4, h5, h6 {
+      font-weight: 700 !important;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .font-bold {
+      font-weight: 700 !important;
+    }
+    
+    .font-black {
+      font-weight: 900 !important;
+    }
+    
+    .font-semibold {
+      font-weight: 600 !important;
+    }
+    
+    .font-medium {
+      font-weight: 500 !important;
+    }
+    
+    /* Force Safari to render bold correctly */
+    .section-title,
+    h1.font-black,
+    h2.font-bold,
+    h3.font-bold {
+      text-rendering: optimizeLegibility;
+    }
   }
 }

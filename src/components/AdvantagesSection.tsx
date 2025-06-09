@@ -46,7 +46,7 @@ const CountUp = ({ end, duration = 2000, startOnView = true, suffix = '' }) => {
     count;
 
   return (
-    <span ref={elementRef} className="font-dm-serif">
+    <span ref={elementRef} className="font-merriweather">
       {formattedCount}{suffix}
     </span>
   );
@@ -86,7 +86,7 @@ const StatisticsSection = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
                 {statistics.map((stat, index) => (
                   <div key={index} className="text-center">
-                    <div className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-gold mb-2 font-dm-serif">
+                    <div className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-gold mb-2 font-merriweather">
                       <CountUp end={stat.value} suffix={stat.suffix} duration={2000} />
                     </div>
                     <div className="text-primary-light font-inter font-bold mb-1 text-sm md:text-base">{stat.label}</div>

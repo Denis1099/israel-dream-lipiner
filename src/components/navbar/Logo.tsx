@@ -16,7 +16,7 @@ const Logo: React.FC<LogoProps> = ({ scrolled }) => {
     <div className="flex-shrink-0">
       <Link to="/" onClick={handleLogoClick} className="block">
         <img 
-          src="/lovable-uploads/logo.webp" 
+          src="/lovable-uploads/logo.webp?v=2024" 
           alt="עו״ד אבי ליפינר לוגו" 
           className={`transition-all duration-300 ${scrolled ? 'h-14' : 'h-16'}`}
           width="270"
