@@ -22,8 +22,8 @@ const Logo: React.FC<LogoProps> = ({ scrolled }) => {
           width="270"
           height="54"
           style={{ 
-            width: scrolled ? '170px' : '210px', 
-            height: scrolled ? '34px' : '42px',
+            width: scrolled ? '170px' : '190px', 
+            height: scrolled ? '34px' : '38px',
             objectFit: 'contain'
           }}
         />

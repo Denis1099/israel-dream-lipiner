@@ -34,8 +34,8 @@ const AboutSection = () => {
                       filter: 'contrast(1.08) saturate(1.08) brightness(1.02)',
                       imageRendering: 'crisp-edges'
                     }}
-                    width="500"
-                    height="500"
+                    width="386"
+                    height="386"
                     loading="lazy"
                   />
                   
@@ -100,8 +100,8 @@ const AboutSection = () => {
                         filter: 'contrast(1.08) saturate(1.08) brightness(1.02)',
                         imageRendering: 'crisp-edges'
                       }}
-                      width="400"
-                      height="400"
+                      width="386"
+                      height="386"
                       loading="lazy"
                     />
                     
@@ -165,6 +165,132 @@ const AboutSection = () => {
             </div>
           </div>
         </AnimatedBox>
+
+        {/* Attorney Yaron Fuks section - with opposite layout */}
+        <div className="mt-12 md:mt-16">
+          <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-16">
+            {/* Left column (content) - Full width on mobile */}
+            <div className="w-full lg:w-7/12 lg:order-1">
+              <AnimatedBox animation="slideInLeft" delay={100}>
+                <h3 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-primary-gold leading-tight">
+            
+                  Attorney Yaron Fuks
+                </h3>
+                
+                <div className="text-black space-y-4 mb-6 md:mb-8" style={{ lineHeight: '1.6' }}>
+                  <p className="text-base md:text-lg font-medium">
+                    Attorney Yaron Fuks brings two decades of experience in business and real estate law, 
+                    combined with comprehensive expertise in insolvency proceedings. His distinguished 
+                    military service as an IDF Captain and five years representing Israel as a community 
+                    emissary in the United States and Canada have equipped him with invaluable 
+                    cross-cultural understanding.
+                  </p>
+                  <p className="text-base md:text-lg font-medium">
+                    With fluent English and deep knowledge of both American and Israeli legal systems, 
+                    Attorney Fuks provides uniquely qualified guidance for Americans conducting business 
+                    and investing in Israel.
+                  </p>
+                </div>
+              </AnimatedBox>
+              
+              {/* Mobile-only image for Yaron */}
+              <div className="block lg:hidden mb-6">
+                <AnimatedBox animation="slideInRight">
+                  <div className="relative max-w-xs mx-auto">
+                    <div 
+                      className="absolute -top-3 -right-3 w-full h-full bg-primary-gold/15 rounded-lg z-0"
+                      aria-hidden="true"
+                    ></div>
+                    <div className="relative rounded-lg overflow-hidden shadow-xl z-10">
+                      <img 
+                        src="/lovable-uploads/yaron-image.webp" 
+                        alt="Attorney Yaron Fuks" 
+                        className="w-full h-auto relative z-10 object-cover"
+                        style={{ 
+                          aspectRatio: '1/1',
+                          filter: 'contrast(1.08) saturate(1.08) brightness(1.02)',
+                          imageRendering: 'crisp-edges'
+                        }}
+                        width="386"
+                        height="386"
+                        loading="lazy"
+                      />
+                      
+                      {/* Vignette overlay */}
+                      <div 
+                        className="absolute inset-0 z-20 pointer-events-none"
+                        style={{
+                          boxShadow: 'inset 0 0 40px rgba(0,0,0,0.15), inset 0 0 3px rgba(0,0,0,0.1)',
+                          background: 'radial-gradient(circle, transparent 60%, rgba(0,0,0,0.07) 100%)'
+                        }}
+                      ></div>
+                      
+                      {/* Subtle golden highlight at the bottom */}
+                      <div 
+                        className="absolute bottom-0 left-0 right-0 h-16 z-20 pointer-events-none opacity-30"
+                        style={{
+                          background: 'linear-gradient(to top, rgba(176, 141, 87, 0.18), transparent)'
+                        }}
+                      ></div>
+                    </div>
+                    <div 
+                      className="absolute -bottom-3 -left-3 w-16 h-16 md:w-24 md:h-24 bg-primary-gold rounded-lg z-0"
+                      aria-hidden="true"
+                    ></div>
+                  </div>
+                </AnimatedBox>
+              </div>
+            </div>
+            
+            {/* Right column (image) - Only visible on desktop */}
+            <div className="hidden lg:block lg:w-4/12 lg:order-2">
+              <AnimatedBox animation="slideInRight">
+                <div className="relative h-full flex items-start">
+                  <div 
+                    className="absolute -top-5 -right-5 w-full h-full bg-primary-gold/15 rounded-lg z-0"
+                    aria-hidden="true"
+                  ></div>
+                  <div className="relative rounded-lg overflow-hidden shadow-xl z-10">
+                    <img 
+                      src="/lovable-uploads/yaron-image.webp" 
+                      alt="Attorney Yaron Fuks" 
+                      className="w-auto h-auto relative z-10 object-cover"
+                      style={{ 
+                        aspectRatio: '1/1',
+                        filter: 'contrast(1.08) saturate(1.08) brightness(1.02)',
+                        imageRendering: 'crisp-edges'
+                      }}
+                      width="386"
+                      height="386"
+                      loading="lazy"
+                    />
+                    
+                    {/* Vignette overlay to add depth and hide compression artifacts */}
+                    <div 
+                      className="absolute inset-0 z-20 pointer-events-none"
+                      style={{
+                        boxShadow: 'inset 0 0 40px rgba(0,0,0,0.15), inset 0 0 3px rgba(0,0,0,0.1)',
+                        background: 'radial-gradient(circle, transparent 60%, rgba(0,0,0,0.07) 100%)'
+                      }}
+                    ></div>
+                    
+                    {/* Enhanced golden highlight at the bottom */}
+                    <div 
+                      className="absolute bottom-0 left-0 right-0 h-24 z-20 pointer-events-none opacity-30"
+                      style={{
+                        background: 'linear-gradient(to top, rgba(176, 141, 87, 0.22), transparent)'
+                      }}
+                    ></div>
+                  </div>
+                  <div 
+                    className="absolute -bottom-3 -left-3 w-24 h-24 bg-primary-gold rounded-lg z-0"
+                    aria-hidden="true"
+                  ></div>
+                </div>
+              </AnimatedBox>
+            </div>
+          </div>
+        </div>
 
       </div>
       
