@@ -86,7 +86,7 @@ const ContactSection = () => {
               <span className="text-primary-gold">Contact the Office</span>
             </h2>
             <p className="text-lg md:text-xl text-center text-gray-700 max-w-3xl mx-auto">
-              Attorneys Yaron Fuks & Avi Lipiner<br />
+              Attorneys Yaron Fuks, Avi Lipiner & Koby Bargad<br />
               Offices in Petah Tikva, Israel | Serving clients across the U.S.
             </p>
           </AnimatedBox>

@@ -19,6 +19,13 @@ const Logo: React.FC<LogoProps> = ({ scrolled }) => {
           src="/lovable-uploads/logo.webp" 
           alt="עו״ד אבי ליפינר לוגו" 
           className={`transition-all duration-300 ${scrolled ? 'h-14' : 'h-16'}`}
+          width="270"
+          height="54"
+          style={{ 
+            width: scrolled ? '170px' : '210px', 
+            height: scrolled ? '34px' : '42px',
+            objectFit: 'contain'
+          }}
         />
       </Link>
     </div>

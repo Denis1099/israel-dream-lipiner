@@ -27,7 +27,7 @@ const AboutSection = () => {
                 <div className="relative rounded-lg overflow-hidden shadow-xl z-10">
                   <img 
                     src="/lovable-uploads/avi-and-yaron.webp" 
-                    alt="Avi Lipiner and Yaron Fuks" 
+                    alt="Avi Lipiner, Yaron Fuks and Koby Bargad" 
                     className="w-auto h-auto relative z-10 object-cover"
                     style={{ 
                       aspectRatio: '1/1',
@@ -72,7 +72,7 @@ const AboutSection = () => {
               
               <div className="text-black space-y-4 mb-6 md:mb-8" style={{ lineHeight: '1.6' }}>
                 <p className="text-base md:text-lg font-medium">
-                Attorneys Yaron Fuks and Avi Lipiner lead our firm with 20+ years of experience 
+                Attorneys Yaron Fuks, Avi Lipiner and Koby Bargad lead our firm with 20+ years of experience 
                 helping American families navigate Israeli real estate and business investments.
                 </p>
                 <p className="text-base md:text-lg font-medium">
@@ -93,7 +93,7 @@ const AboutSection = () => {
                   <div className="relative rounded-lg overflow-hidden shadow-xl z-10">
                     <img 
                       src="/lovable-uploads/avi-and-yaron.webp" 
-                      alt="Avi Lipiner and Yaron Fuks" 
+                      alt="Avi Lipiner, Yaron Fuks and Koby Bargad" 
                       className="w-full h-auto relative z-10 object-cover"
                       style={{ 
                         aspectRatio: '1/1',

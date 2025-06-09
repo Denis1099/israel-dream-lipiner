@@ -22,7 +22,7 @@ class Mailer {
         $this->mail->CharSet = 'UTF-8';
 
         // Recipients
-        $this->mail->setFrom(SMTP_USERNAME, 'Avi Lipiner Website');
+        $this->mail->setFrom(SMTP_USERNAME, 'Attorneys Yaron Fuks, Avi Lipiner & Koby Bargad Website');
         $this->mail->addAddress(NOTIFICATION_EMAIL);
     }
 

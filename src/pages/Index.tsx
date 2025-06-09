@@ -50,7 +50,7 @@ const Index = () => {
 
   // Set page title and description
   useEffect(() => {
-    document.title = "Israeli Real Estate Lawyers for Americans | Attorneys Yaron Fuks & Avi Lipiner";
+    document.title = "Israeli Real Estate Lawyers for Americans | Attorneys Yaron Fuks, Avi Lipiner & Koby Bargad";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Experienced Israeli real estate and business lawyers helping Americans invest in Israel. Legal representation for property purchases, business formation, and estate planning. 500+ successful American client transactions.');

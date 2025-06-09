@@ -99,7 +99,7 @@ const Footer = () => {
         {/* Copyright and Disclaimer */}
         <div className="border-t border-white/10 pt-6 space-y-4">
           <div className="text-center text-gray-400 text-sm">
-            <p>© {currentYear} Attorneys Yaron Fuks & Avi Lipiner</p>
+            <p>© {currentYear} Attorneys Yaron Fuks, Avi Lipiner & Koby Bargad</p>
           </div>
           
           <div className="text-center text-gray-400 text-xs max-w-4xl mx-auto">
