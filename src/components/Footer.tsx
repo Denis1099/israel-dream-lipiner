@@ -13,9 +13,6 @@ const Footer = () => {
   }, {
     name: 'Services',
     href: '#services'
-  }, {
-    name: 'Contact',
-    href: '#contact'
   }];
 
   const scrollToTop = () => {

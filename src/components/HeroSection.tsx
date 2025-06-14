@@ -132,8 +132,8 @@ const HeroSection = () => {
             >
               <div className="p-6 sm:p-8">
                 <h3 
-                  style={{ color: '#b08d57', fontWeight: '700' }} 
-                  className="font-bold text-primary-gold mb-8 text-center text-3xl md:text-4xl relative"
+                  style={{ color: '#b08d57', fontWeight: '900' }} 
+                  className="font-black text-primary-gold mb-8 text-center text-3xl md:text-4xl relative"
                 >
                   Schedule a Free Consultation
                   <div className="absolute -bottom-3 left-0 right-0 mx-auto h-1 w-16 bg-primary-gold/60" style={{ backgroundColor: 'rgba(176, 141, 87, 0.6)' }}></div>

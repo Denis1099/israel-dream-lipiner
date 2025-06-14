@@ -85,7 +85,7 @@ const AboutSection = () => {
             {/* Mobile-only image */}
             <div className="block lg:hidden mb-6">
               <AnimatedBox animation="slideInLeft">
-                <div className="relative max-w-xs mx-auto">
+                <div className="relative max-w-[300px] mx-auto">
                   <div 
                     className="absolute -top-3 -left-3 w-full h-full bg-primary-gold/15 rounded-lg z-0"
                     aria-hidden="true"
@@ -100,8 +100,8 @@ const AboutSection = () => {
                         filter: 'contrast(1.08) saturate(1.08) brightness(1.02)',
                         imageRendering: 'crisp-edges'
                       }}
-                      width="386"
-                      height="386"
+                      width="300"
+                      height="300"
                       loading="lazy"
                     />
                     
@@ -145,26 +145,9 @@ const AboutSection = () => {
                   ))}
                 </ul>
               </div>
-              
             </AnimatedBox>
           </div>
         </div>
-        
-        {/* Signature section - centered in middle */}
-        <AnimatedBox animation="fadeIn" delay={600}>
-          <div className="mt-8 md:mt-12 flex justify-center">
-            <div className="w-52 md:w-64">
-              <img 
-                src="/lovable-uploads/avi-lipiner-signature.webp" 
-                alt="Attorney Avi Lipiner Signature" 
-                className="w-full h-auto"
-                width="256"
-                height="100"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </AnimatedBox>
 
         {/* Attorney Yaron Fuks section - with opposite layout */}
         <div className="mt-12 md:mt-16">
@@ -173,7 +156,6 @@ const AboutSection = () => {
             <div className="w-full lg:w-7/12 lg:order-1">
               <AnimatedBox animation="slideInLeft" delay={100}>
                 <h3 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-primary-gold leading-tight" style={{ fontWeight: '700' }}>
-            
                   Attorney Yaron Fuks
                 </h3>
                 
@@ -196,7 +178,7 @@ const AboutSection = () => {
               {/* Mobile-only image for Yaron */}
               <div className="block lg:hidden mb-6">
                 <AnimatedBox animation="slideInRight">
-                  <div className="relative max-w-xs mx-auto">
+                  <div className="relative max-w-[300px] mx-auto">
                     <div 
                       className="absolute -top-3 -right-3 w-full h-full bg-primary-gold/15 rounded-lg z-0"
                       aria-hidden="true"
@@ -211,11 +193,10 @@ const AboutSection = () => {
                           filter: 'contrast(1.08) saturate(1.08) brightness(1.02)',
                           imageRendering: 'crisp-edges'
                         }}
-                        width="386"
-                        height="386"
+                        width="300"
+                        height="300"
                         loading="lazy"
                       />
-                      
                       {/* Vignette overlay */}
                       <div 
                         className="absolute inset-0 z-20 pointer-events-none"
@@ -224,7 +205,6 @@ const AboutSection = () => {
                           background: 'radial-gradient(circle, transparent 60%, rgba(0,0,0,0.07) 100%)'
                         }}
                       ></div>
-                      
                       {/* Subtle golden highlight at the bottom */}
                       <div 
                         className="absolute bottom-0 left-0 right-0 h-16 z-20 pointer-events-none opacity-30"
@@ -239,6 +219,24 @@ const AboutSection = () => {
                     ></div>
                   </div>
                 </AnimatedBox>
+                {/* Mobile signature in a separate div below the image */}
+                <div className="w-full flex justify-center mt-8">
+                  <img 
+                    src="/lovable-uploads/yaron-fuks-signature.webp" 
+                    alt="Attorney Yaron Fuks's signature" 
+                    className="max-w-[120px] w-full h-auto mx-auto"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              {/* Desktop signature under text, center aligned */}
+              <div className="hidden lg:flex justify-center mt-6">
+                <img 
+                  src="/lovable-uploads/yaron-fuks-signature.webp" 
+                  alt="Attorney Yaron Fuks's signature" 
+                  className="max-w-[200px] w-full h-auto mx-auto"
+                  loading="lazy"
+                />
               </div>
             </div>
             
@@ -291,7 +289,6 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
-
       </div>
       
       {/* Decorative elements */}

@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
-import StatisticsSection from '@/components/AdvantagesSection';
 import ServicesSection from '@/components/ServicesSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
 import FaqSection from '@/components/FaqSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -107,10 +105,8 @@ const Index = () => {
       <main>
         <HeroSection />
         <AboutSection />
-        <StatisticsSection />
         <ServicesSection />
         <MidPageCTA />
-        <TestimonialsSection />
         <FaqSection />
         <ContactSection />
       </main>
