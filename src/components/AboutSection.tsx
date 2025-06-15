@@ -186,14 +186,14 @@ const AboutSection = () => {
                       <img 
                         src="/lovable-uploads/yaron-image.webp" 
                         alt="Attorney Yaron Fuks" 
-                        className="w-full h-auto relative z-10 object-cover"
+                        className="w-full h-auto relative z-10"
                         style={{ 
                           aspectRatio: '1/1',
-                          filter: 'contrast(1.08) saturate(1.08) brightness(1.02)',
-                          imageRendering: 'crisp-edges'
+                          imageRendering: 'auto',
+                          objectFit: 'contain'
                         }}
-                        width="300"
-                        height="300"
+                        width="447"
+                        height="447"
                         loading="lazy"
                       />
                       {/* Vignette overlay */}
