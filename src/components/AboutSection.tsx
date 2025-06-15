@@ -5,7 +5,6 @@ import AnimatedBox from './AnimatedBox';
 const AboutSection = () => {
   // Why Choose Our Firm points
   const whyChoosePoints = [
-    '500+ successful American client transactions',
     'Deep expertise in U.S.-Israel legal intersections ',
     'Coverage across Jerusalem, Tel Aviv, and Judea & Samaria',
     'Direct access to senior partners, not junior associates',  
