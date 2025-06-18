@@ -17,7 +17,7 @@ const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('https://israel-dream.lipiner.co.il/submit-lead.php', {
+      const response = await fetch('https://fuks-law.co.il/submit-lead.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -66,8 +66,8 @@ const ContactSection = () => {
     {
       icon: <Globe size={24} />,
       title: "Website",
-      value: "israel-dream.lipiner.co.il",
-      href: "https://israel-dream.lipiner.co.il"
+              value: "fuks-law.co.il",
+        href: "https://fuks-law.co.il"
     },
     {
       icon: <Mail size={24} />,

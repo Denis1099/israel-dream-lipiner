@@ -98,6 +98,6 @@
 
 ## 📝 Notes
 - All console.log statements removed except for error logging
-- Forms submit to: `https://israel-dream.lipiner.co.il/submit-lead.php`
+- Forms submit to: `https://fuks-law.co.il/submit-lead.php`
 - Site optimized for Israeli real estate law firm targeting American clients
 - Structured data includes business information for local SEO 

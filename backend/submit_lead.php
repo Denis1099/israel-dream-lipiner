@@ -5,7 +5,7 @@ ini_set('display_errors', 0); // ...but don't display them to the user
 // error_log('submit-lead.php (israel-dream) script started.'); // Optional: uncomment for verbose logging
 
 // CORS Headers - Allow requests from the israel-dream subdomain
-header('Access-Control-Allow-Origin: https://israel-dream.lipiner.co.il');
+header('Access-Control-Allow-Origin: https://fuks-law.co.il');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 header('Content-Type: application/json');
@@ -33,7 +33,7 @@ $db_user = 'u556043506_denis109';    // Keep your actual database user
 $db_pass = DB_PASSWORD;
 
 // Email configuration
-$admin_email = 'lipiner10@gmail.com';
+  $admin_email = 'win4you2@gmail.com';
 
 try {
     // Get and validate POST data
@@ -71,7 +71,7 @@ try {
     $email_content .= "מקור: $source\n"; // Source will be specific or 'israel-dream-website'
 
     // Set email headers
-    $headers = "From: no-reply@lipiner.co.il\r\n";
+    $headers = "From: no-reply@fuks-law.co.il\r\n";
     $headers .= "Reply-To: $email\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 

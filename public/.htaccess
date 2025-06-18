@@ -22,7 +22,7 @@
   Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
   
   # CORS (restrict to your domain only)
-  Header set Access-Control-Allow-Origin "https://israel-dream.lipiner.co.il"
+  Header set Access-Control-Allow-Origin "https://fuks-law.co.il"
 </IfModule>
 
 # ====================

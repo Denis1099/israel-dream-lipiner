@@ -1,6 +1,6 @@
 <?php
 // Set headers for CORS and content type
-header('Access-Control-Allow-Origin: https://real-estate.lipiner.co.il');
+header('Access-Control-Allow-Origin: https://real-estate.fuks-law.co.il');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 header('Content-Type: application/json');

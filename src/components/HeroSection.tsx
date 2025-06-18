@@ -30,7 +30,7 @@ const HeroSection = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('https://israel-dream.lipiner.co.il/submit-lead.php', {
+      const response = await fetch('https://fuks-law.co.il/submit-lead.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

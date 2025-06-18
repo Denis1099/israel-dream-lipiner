@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://israel-dream.lipiner.co.il/sitemap.xml
+Sitemap: https://fuks-law.co.il/sitemap.xml
 
 # Block access to backend
 Disallow: /api/

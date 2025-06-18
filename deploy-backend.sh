@@ -3,7 +3,7 @@
 # Configuration
 HOSTINGER_USER="your_hostinger_username"
 HOSTINGER_HOST="your_hostinger_host"
-REMOTE_PATH="/domains/lipinier.co.il/public_html/real-estate/backend"
+REMOTE_PATH="/domains/fuks-law.co.il/public_html/backend"  # Update path for jetserver
 
 # Create backend directory structure
 mkdir -p backend
@@ -19,9 +19,9 @@ define('DB_NAME', 'your_database_name');
 
 define('SMTP_HOST', 'smtp.hostinger.com');
 define('SMTP_PORT', 587);
-define('SMTP_USERNAME', 'your_email@lipinier.co.il');
+define('SMTP_USERNAME', 'your_email@fuks-law.co.il');
 define('SMTP_PASSWORD', 'your_email_password');
-define('NOTIFICATION_EMAIL', 'your_email@lipinier.co.il');
+define('NOTIFICATION_EMAIL', 'win4you2@gmail.com');
 
 error_reporting(E_ALL);
 ini_set('display_errors', 0);

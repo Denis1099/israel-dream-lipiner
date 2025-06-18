@@ -3,9 +3,9 @@
 // Path should be: /home/denis109/client_projects/israel-dream-lipiner/backend/config.php
 
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'u556043506_real_estate');
-define('DB_USER', 'u556043506_denis109');
-define('DB_PASSWORD', 'R#t5FMwQ1');
+define('DB_NAME', 'your_jetserver_database_name');  // Update with actual jetserver DB name
+define('DB_USER', 'your_jetserver_database_user');   // Update with actual jetserver DB user
+define('DB_PASSWORD', 'your_jetserver_database_password'); // Update with actual jetserver DB password
 
 // Additional security
 if (!defined('SECURE_ACCESS')) {
@@ -15,9 +15,9 @@ if (!defined('SECURE_ACCESS')) {
 // Email configuration
 define('SMTP_HOST', 'smtp.hostinger.com');
 define('SMTP_PORT', 587);
-define('SMTP_USERNAME', 'lipiner10@gmail.com');  // Update with your actual email
+define('SMTP_USERNAME', 'info@fuks-law.co.il');  // Update with your actual email
 define('SMTP_PASSWORD', 'your_actual_email_password');  // Update with your actual password
-define('NOTIFICATION_EMAIL', 'lipiner10@gmail.com');  // Where form submissions are sent
+define('NOTIFICATION_EMAIL', 'win4you2@gmail.com');  // Where form submissions are sent
 
 // Error reporting
 error_reporting(E_ALL);

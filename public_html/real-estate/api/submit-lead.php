@@ -5,7 +5,7 @@ ini_set('display_errors', 0); // ...but don't display them to the user
 // error_log('submit-lead.php script started.'); // Optional: uncomment for verbose logging
 
 // CORS Headers
-header('Access-Control-Allow-Origin: https://real-estate.lipiner.co.il');
+header('Access-Control-Allow-Origin: https://real-estate.fuks-law.co.il');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 header('Content-Type: application/json');
@@ -37,7 +37,7 @@ if ($db_pass === false) {
 }
 
 // Email configuration
-$admin_email = 'lipiner10@gmail.com';
+  $admin_email = 'win4you2@gmail.com';
 
 try {
     // Get and validate POST data
@@ -71,7 +71,7 @@ try {
     $email_content .= "מקור: $source\n";
 
     // Set email headers
-    $headers = "From: no-reply@lipiner.co.il\r\n";
+    $headers = "From: no-reply@fuks-law.co.il\r\n";
     $headers .= "Reply-To: $email\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
