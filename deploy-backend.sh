@@ -17,11 +17,11 @@ define('DB_USER', 'your_database_username');
 define('DB_PASS', 'your_database_password');
 define('DB_NAME', 'your_database_name');
 
-define('SMTP_HOST', 'smtp.hostinger.com');
-define('SMTP_PORT', 587);
-define('SMTP_USERNAME', 'your_email@fuks-law.co.il');
+define('SMTP_HOST', 'mail.fuks-law.co.il');  // jetserver/cPanel SMTP
+define('SMTP_PORT', 587);  // Or 465 for SSL
+define('SMTP_USERNAME', 'yaron@fuks-law.co.il');
 define('SMTP_PASSWORD', 'your_email_password');
-define('NOTIFICATION_EMAIL', 'win4you2@gmail.com');
+define('NOTIFICATION_EMAIL', 'yaron@fuks-law.co.il');
 
 error_reporting(E_ALL);
 ini_set('display_errors', 0);

@@ -21,8 +21,12 @@
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
   
-  # CORS (restrict to your domain only)
-  Header set Access-Control-Allow-Origin "https://fuks-law.co.il"
+      # CORS (allow both HTTP and HTTPS)
+    Header set Access-Control-Allow-Origin "http://fuks-law.co.il"
+    Header always set Access-Control-Allow-Origin "http://fuks-law.co.il"
+    Header set Access-Control-Allow-Methods "POST, GET, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Accept, Origin, X-Requested-With"
+    Header set Access-Control-Allow-Credentials "true"
 </IfModule>
 
 # ====================

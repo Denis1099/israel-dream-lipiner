@@ -1,5 +1,5 @@
-# Enable CORS
-Header set Access-Control-Allow-Origin "https://real-estate.fuks-law.co.il"
+# Enable CORS - Allow both HTTP and HTTPS
+Header set Access-Control-Allow-Origin "http://real-estate.fuks-law.co.il"
 Header set Access-Control-Allow-Methods "POST, OPTIONS"
 Header set Access-Control-Allow-Headers "Content-Type"
 

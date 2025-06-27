@@ -12,12 +12,12 @@ if (!defined('SECURE_ACCESS')) {
     die('Direct access not allowed');
 }
 
-// Email configuration
-define('SMTP_HOST', 'smtp.hostinger.com');
-define('SMTP_PORT', 587);
-define('SMTP_USERNAME', 'info@fuks-law.co.il');  // Update with your actual email
-define('SMTP_PASSWORD', 'your_actual_email_password');  // Update with your actual password
-define('NOTIFICATION_EMAIL', 'win4you2@gmail.com');  // Where form submissions are sent
+// Email configuration for jetserver/cPanel
+define('SMTP_HOST', 'mail.fuks-law.co.il');  // jetserver/cPanel SMTP host
+define('SMTP_PORT', 587);  // Or 465 for SSL
+define('SMTP_USERNAME', 'yaron@fuks-law.co.il');  // Your actual email
+define('SMTP_PASSWORD', 'ef4]~($n~d2d^-XO');  // Your actual password
+define('NOTIFICATION_EMAIL', 'yaron@fuks-law.co.il');  // Where form submissions are sent
 
 // Error reporting
 error_reporting(E_ALL);

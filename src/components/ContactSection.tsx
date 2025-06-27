@@ -17,7 +17,7 @@ const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('https://fuks-law.co.il/submit-lead.php', {
+      const response = await fetch('/backend/submit_lead.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -72,8 +72,8 @@ const ContactSection = () => {
     {
       icon: <Mail size={24} />,
       title: "Email",
-      value: "win4you2@gmail.com",
-      href: "mailto:win4you2@gmail.com"
+      value: "yaron@fuks-law.co.il",
+      href: "mailto:yaron@fuks-law.co.il"
     }
   ];
   

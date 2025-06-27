@@ -4,10 +4,17 @@ error_reporting(E_ALL); // Keep reporting all errors...
 ini_set('display_errors', 0); // ...but don't display them to the user
 // error_log('submit-lead.php (israel-dream) script started.'); // Optional: uncomment for verbose logging
 
-// CORS Headers - Allow requests from the israel-dream subdomain
-header('Access-Control-Allow-Origin: https://fuks-law.co.il');
+// CORS Headers - Allow requests from both HTTP and HTTPS
+$allowed_origins = ['http://fuks-law.co.il', 'https://fuks-law.co.il'];
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+if (in_array($origin, $allowed_origins)) {
+    header('Access-Control-Allow-Origin: ' . $origin);
+} else {
+    header('Access-Control-Allow-Origin: http://fuks-law.co.il');
+}
 header('Access-Control-Allow-Methods: POST, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type');
+header('Access-Control-Allow-Headers: Content-Type, Accept, Origin, X-Requested-With');
+header('Access-Control-Allow-Credentials: true');
 header('Content-Type: application/json');
 
 // Handle preflight OPTIONS request
@@ -27,13 +34,14 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 define('SECURE_ACCESS', true);
 require_once __DIR__ . '/config.php';
 
+// Use database configuration from config.php
 $db_host = DB_HOST;
-$db_name = 'u556043506_real_estate'; // Keep your actual database name
-$db_user = 'u556043506_denis109';    // Keep your actual database user
+$db_name = DB_NAME;  // Use jetserver database name from config
+$db_user = DB_USER;  // Use jetserver database user from config  
 $db_pass = DB_PASSWORD;
 
 // Email configuration
-  $admin_email = 'win4you2@gmail.com';
+  $admin_email = 'yaron@fuks-law.co.il';
 
 try {
     // Get and validate POST data

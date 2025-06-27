@@ -1,6 +1,12 @@
 <?php
-// Set headers for CORS and content type
-header('Access-Control-Allow-Origin: https://real-estate.fuks-law.co.il');
+// Set headers for CORS and content type - Allow both HTTP and HTTPS
+$allowed_origins = ['http://real-estate.fuks-law.co.il', 'https://real-estate.fuks-law.co.il'];
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+if (in_array($origin, $allowed_origins)) {
+    header('Access-Control-Allow-Origin: ' . $origin);
+} else {
+    header('Access-Control-Allow-Origin: http://real-estate.fuks-law.co.il');
+}
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 header('Content-Type: application/json');

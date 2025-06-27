@@ -4,8 +4,14 @@ error_reporting(E_ALL); // Keep reporting all errors...
 ini_set('display_errors', 0); // ...but don't display them to the user
 // error_log('submit-lead.php script started.'); // Optional: uncomment for verbose logging
 
-// CORS Headers
-header('Access-Control-Allow-Origin: https://real-estate.fuks-law.co.il');
+// CORS Headers - Allow requests from both HTTP and HTTPS
+$allowed_origins = ['http://real-estate.fuks-law.co.il', 'https://real-estate.fuks-law.co.il'];
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+if (in_array($origin, $allowed_origins)) {
+    header('Access-Control-Allow-Origin: ' . $origin);
+} else {
+    header('Access-Control-Allow-Origin: http://real-estate.fuks-law.co.il');
+}
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 header('Content-Type: application/json');
@@ -37,7 +43,7 @@ if ($db_pass === false) {
 }
 
 // Email configuration
-  $admin_email = 'win4you2@gmail.com';
+  $admin_email = 'yaron@fuks-law.co.il';
 
 try {
     // Get and validate POST data
